@@ -1,0 +1,809 @@
+/* ==========================================================================
+   GLOBAL STYLES & SYSTEM VARIABLES
+   ========================================================================== */
+
+:root {
+    --font-primary: Arial, Helvetica, sans-serif;
+    --color-bg-dark: #b5b4b42f;
+    --bg: #f4f6fa;
+    --border: #e2e6ef;
+    --color-border: #666666;
+
+    --accent: #2545e8;
+    --accent-light: rgba(37, 69, 232, 0.07);
+    --accent-glow: rgba(37, 69, 232, 0.18);
+}
+
+body {
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+}
+
+/* Global jsPsych utility overrides */
+.jspsych-content {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.jspsych-btn {
+    font-size: 1rem;
+    padding: 12px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.jspsych-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ==========================================================================
+   OVERVIEW PAGE
+   ========================================================================== */
+
+
+
+body.state-overview #jspsych-content-wrapper {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.state-overview .jspsych-content {
+    height: 120vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   CONSENT PAGE
+   ========================================================================== */
+
+body.state-consent {
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+body.state-consent #jspsych-content-wrapper {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.state-consent .jspsych-content {
+    height: 120vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+#instruction-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 18px;
+    padding: 24px 0 12px;
+    overflow: hidden;
+
+    --consent-width: 80%;
+    --consent-max-width: 1100px;
+    --consent-box-height: 60vh;
+}
+
+#school-header {
+    width: var(--consent-width);
+    max-width: var(--consent-max-width);
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+#school-logo {
+    height: 100px;
+    width: auto;
+}
+
+#consent-box {
+    text-align: left;
+    width: var(--consent-width);
+    max-width: var(--consent-max-width);
+    border: 1px solid var(--color-border);
+    background-color: #ffffff;
+    height: var(--consent-box-height);
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+#consent-box-header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: #ffffff;
+    padding: 35px 50px 25px;
+}
+
+#consent-box-header h1 {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+#consent-box-body {
+    padding: 0 50px 35px;
+}
+
+.consent-text {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.consent-text p {
+    margin-bottom: 25px;
+}
+
+#consent-controls {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+#checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#consent-checkbox {
+    width: 22px;
+    height: 22px;
+}
+
+/* ==========================================================================
+   INSTRUCTIONS PAGE
+   ========================================================================== */
+/* =========================
+   FULL SCREEN LAYOUT
+========================= */
+
+body.state-instructions {
+    background: var(--bg);
+}
+
+/* center vertically + horizontally */
+.instruction-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* main container */
+.instruction-container {
+    width: min(1000px, 92vw);
+    padding: 30px 20px;
+
+    font-family: sans-serif;
+    line-height: 1.6;
+
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.instruction-header {
+    text-align: center;
+}
+
+.instruction-header h2 {
+    margin: 0 0 10px 0;
+}
+
+.instruction-header p {
+    color: #555;
+    margin: 0;
+}
+
+/* =========================
+   PART CARDS (MAIN FEATURE)
+========================= */
+
+.part-card {
+    background: white;
+    border-radius: 14px;
+    padding: 26px 28px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0);
+
+    position: relative;
+}
+
+/* number badge */
+.part-label {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+    font-size: 0.9rem;
+
+    background: #e9eefc;
+    color: #2f5bea;
+}
+
+/* titles */
+.part-title {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+/* =========================
+   FLOW (PART 1)
+========================= */
+
+.instruction-flow {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 24px;
+}
+
+.instruction-box {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: #767171;
+}
+
+.instruction-box h4 {
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.instruction-box p {
+    margin: 6px 0;
+    text-align: center;
+}
+
+/* arrow */
+.flow-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 40px;
+    color: #767171;
+}
+
+/* =========================
+   QUESTIONNAIRE BOX
+========================= */
+
+.instruction-box.full {
+    background: #d6e5f6;
+}
+
+
+
+/* =========================
+   NAV BUTTON AREA SPACING
+========================= */
+
+.jspsych-instructions-nav {
+    margin-top: 0px;
+}
+
+/* ==========================================================================
+   Comprehension Chcke PAGE
+   ========================================================================== */
+
+.cc-header {
+    max-width: 800px;
+    margin: 40px auto 30px auto;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.cc-header h2 {
+    margin-bottom: 10px;
+}
+
+.cc-header p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* small card inside preamble */
+.cc-box {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-top: 10px;
+}
+
+.cc-box h3 {
+    margin: 0 0 8px 0;
+}
+
+.cc-box p {
+    margin: 0;
+    color: #555;
+}
+
+/* ==========================================================================
+   Transition PAGE
+   ========================================================================== */
+
+body.state-transition {
+    background-color: var(--color-bg-light);
+}
+
+body.state-transition .transition-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+body.state-transition .transition-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+body.state-transition .transition-text {
+    font-size: 1.25rem;
+    line-height: 2;
+    text-align: center;
+    margin-top: 100px;
+}
+
+body.state-transition .transition-text p {
+    margin-bottom: 30px;
+}
+
+body.state-transition .jspsych-instructions-nav {
+    margin-top: 50px;
+}
+
+
+/* ==========================================================================
+   PROGRESS BAR
+   ========================================================================== */
+
+
+body.experiment-progress-hidden #jspsych-progressbar-container {
+  display: none;
+}
+
+#jspsych-progressbar-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-sizing: border-box;
+    width: min(66.666vw, calc(100vw - 32px));
+    margin: 0 auto 1em;
+}
+
+#jspsych-progressbar-container>span {
+    flex: 0 0 auto;
+    margin: 0;
+    padding-right: 0;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.experiment-progress-label {
+    font-weight: 700;
+}
+
+.experiment-progress-value {
+    font-weight: 600;
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+#jspsych-progressbar-outer {
+    flex: 1 1 auto;
+    width: auto;
+    margin: 0;
+}
+
+
+/* ==========================================================================
+   GOLD-MSI
+   ========================================================================== */
+
+
+body.gold-msi-active .jspsych-content-wrapper {
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+body.gold-msi-active .jspsych-content {
+    margin: 12px auto 0;
+}
+
+.gold-msi-container {
+    width: min(90vw, 920px);
+    margin: 0 auto;
+    text-align: left;
+    padding: 30px 30px 60px;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+.gold-msi-container h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 34px 0 22px;
+}
+
+.gold-msi-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0 0 30px;
+}
+
+.gold-msi-items {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.gold-msi-item {
+    padding-bottom: 22px;
+    border-bottom: 1px solid #ececec;
+}
+
+.gold-msi-question {
+    margin: 0 0 12px;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.gold-msi-scale-labels {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: -2px;
+}
+
+.gold-msi-current-value {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-bottom: 2px;
+    min-height: 1.2em;
+    white-space: nowrap;
+}
+
+.gold-msi-scale-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -4px;
+}
+
+.gold-msi-slider {
+    width: clamp(220px, 30vw, 320px);
+}
+
+.gold-msi-scale-label {
+    font-size: 0.9rem;
+    white-space: nowrap;
+    flex: 0 0 auto;
+}
+
+
+
+
+
+/* ==========================================================================
+   MEMORIZATION PAGE
+   ========================================================================== */
+
+#memorization-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.memorization-container h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    padding-top: 100px;
+}
+
+.memorization-instruction p {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+#play-audio-btn {
+    margin-top: 100px;
+    font-size: 1rem;
+    padding: 10px 30px;
+}
+
+/* ==========================================================================
+   RECOGNITION PAGE
+   ========================================================================== */
+
+#recognition-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recognition-container h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    padding-top: 100px;
+}
+
+.recognition-feedback {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 12px 0 -6px;
+    min-height: 1.4em;
+}
+
+.recognition-feedback--correct {
+    color: #1b7f2a;
+}
+
+.recognition-feedback--incorrect {
+    color: #b3261e;
+}
+
+.audio-option.choice-feedback--correct {
+    color: #1b7f2a;
+}
+
+.audio-option.choice-feedback--incorrect {
+    color: #b3261e;
+}
+
+.audio-options {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: clamp(18px, 3vw, 34px);
+    row-gap: clamp(0px, 0.6vh, 6px);
+    justify-items: center;
+    margin-top: clamp(14px, 3vh, 28px);
+    margin-bottom: clamp(18px, 3vh, 50px);
+}
+
+.audio-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(3px, 1vw, 3px);
+}
+
+.play-option-btn {
+    width: clamp(70px, 12vw, 96px);
+    height: clamp(70px, 12vw, 96px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.play-option-btn:focus,
+.play-option-btn:focus-visible {
+    outline: none;
+}
+
+.play-option-btn:disabled {
+    opacity: 0.5;
+}
+
+.play-option-btn .play-icon {
+    width: 72%;
+    height: 72%;
+    object-fit: contain;
+}
+
+.choice-input {
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    box-sizing: border-box;
+    width: clamp(20px, 3vw, 26px);
+    height: clamp(20px, 3vw, 26px);
+    border: 2px solid currentColor;
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
+}
+
+.choice-input:checked::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 34%;
+    height: 62%;
+    border-right: 3px solid currentColor;
+    border-bottom: 3px solid currentColor;
+    transform: translate(-50%, -58%) rotate(45deg);
+}
+
+.choice-input:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.no-match-block {
+    grid-column: 2 / 4;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+}
+
+.no-match-option {
+    width: 80%;
+}
+
+.no-match-text {
+    width: clamp(70px, 12vw, 140px);
+    height: clamp(70px, 12vw, 96px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    text-align: center;
+}
+
+.confidence-box {
+    display: block;
+    background-color: #ADD8E650;
+    width: fit-content;
+    max-width: 100vw;
+
+    box-sizing: border-box;
+    border: 1.5px solid currentColor;
+    padding: 25px;
+    margin: 15px auto 0;
+    margin-bottom: 40px;
+}
+
+.confidence-box--hidden {
+    visibility: hidden;
+}
+
+.confidence-title {
+    font-weight: 500;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.confidence-ratings {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.confidence-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    cursor: pointer;
+    position: relative;
+}
+
+.confidence-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.confidence-number {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: inherit;
+    padding-top: 12px;
+    padding-bottom: 14px;
+    position: relative;
+}
+
+.confidence-input:checked+.confidence-number::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 7px;
+    height: 12px;
+    border-right: 3px solid currentColor;
+    border-bottom: 3px solid currentColor;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+/* Inputs are disabled after submit; keep highlighted ticks fully opaque */
+.audio-option.choice-feedback--correct .choice-input:disabled,
+.audio-option.choice-feedback--incorrect .choice-input:disabled {
+    opacity: 1;
+}
+
+.confidence-input:focus-visible+.confidence-number {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+.confidence-anchor {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+@media (max-width: 720px) {
+    .audio-options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .no-match-block {
+        grid-column: 1 / -1;
+    }
+}

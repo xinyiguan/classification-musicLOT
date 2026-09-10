@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+
+    ports:
+      - "127.0.0.1:8088:3000"  # 8088 for classification-musicLOT
+
+    volumes:
+      - ./data:/app/data
+
+    environment:
+      DATA_DIR: /app/data/incoming
+
+    restart: unless-stopped

@@ -1,0 +1,22 @@
+{
+  "name": "classification-musiclot",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.2",
+    "vite": "^8.2.2"
+  },
+  "dependencies": {
+    "@jspsych/plugin-html-button-response": "^2.1.0",
+    "@jspsych/plugin-html-keyboard-response": "^2.2.0",
+    "@jspsych/plugin-instructions": "^2.1.0",
+    "@jspsych/plugin-preload": "^2.1.0",
+    "jspsych": "^8.3.0"
+  }
+}
