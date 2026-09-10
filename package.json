@@ -4,19 +4,33 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "setup": "npm ci",
     "dev": "vite",
+    "dev:server": "node server/server.js",
+    "dev:all": "concurrently -k \"npm run dev:server\" \"npm run dev\"",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "concurrently": "^9.0.0",
     "typescript": "~6.0.2",
-    "vite": "^8.2.2"
+    "vite": "^8.0.10"
   },
   "dependencies": {
+    "@jspsych/plugin-audio-button-response": "^2.1.1",
+    "@jspsych/plugin-audio-keyboard-response": "^2.1.1",
+    "@jspsych/plugin-external-html": "^2.1.0",
     "@jspsych/plugin-html-button-response": "^2.1.0",
-    "@jspsych/plugin-html-keyboard-response": "^2.2.0",
+    "@jspsych/plugin-html-keyboard-response": "^2.1.0",
+    "@jspsych/plugin-html-slider-response": "2.1.0",
     "@jspsych/plugin-instructions": "^2.1.0",
     "@jspsych/plugin-preload": "^2.1.0",
-    "jspsych": "^8.3.0"
+    "@jspsych/plugin-survey-multi-choice": "^2.2.1",
+    "express": "^5.2.1",
+    "jspsych": "^8.2.3",
+    "papaparse": "^5.5.3"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
   }
 }
