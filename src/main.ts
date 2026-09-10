@@ -15,7 +15,7 @@ import { buildBlockTimeline } from "./trial/blockBuilder.ts"
 import { stimuli } from "./utils/stimuli";
 import { transition } from "./trial/transition";
 import { buildGoldMSITimeline } from "./trial/goldMSI";
-import { buildDemographicsTimeline } from "./trial/demographics"; // Adjust path to where your file is located
+import { buildDemographicsTimeline } from "./trial/demographics"; 
 import { debrief } from "./trial/debrief";
 
 const urlParams = new URLSearchParams(window.location.search);
