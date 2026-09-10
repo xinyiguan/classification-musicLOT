@@ -43,7 +43,6 @@ const BADGE_HEADER_STYLE = "background-color: #ebf5fa; color: #059669; display: 
 const PLAY_BTN_STYLE = "background-color: #f1f5f9; border: 1px solid #cbd5e1; color: #1e293b; padding: 10px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.95rem; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;";
 const OPTION_CONTAINER_STYLE = "display: flex; align-items: center; gap: 12px; margin-bottom: 12px; padding: 8px; border-radius: 8px; border: 1px solid #e2e8f0; background: #ffffff; transition: all 0.25s ease;";
 
-// Adjustable feedback display duration in milliseconds
 const FEEDBACK_DURATION_MS = 1500;
 
 let experimentProgressVisible = false;
@@ -138,6 +137,11 @@ function injectStyles() {
 export function buildTrial(jsPsych: any, stimulus: TrialStimulus) {
   const { trial_id, trainAudio, testAudio, correct_index, tier, foil_type } = stimulus;
 
+  let userResponse: number | null = null;
+  let userConfidence: number | null = null;
+  const audioPlaybackOrder: string[] = [];
+  const audioPlaybackCounts: Record<string, number> = {};
+
   const INLINE_PLAY_SCRIPT = (id: string) => `
     (function() {
       const allAudios = Array.from(document.querySelectorAll('audio'));
@@ -188,7 +192,7 @@ export function buildTrial(jsPsych: any, stimulus: TrialStimulus) {
     <div style="${CARD_STYLE}">
       <div style="${BADGE_HEADER_STYLE}">Classification Task</div>
       <p style="font-size: 1.05rem; color: #2d3643; margin: 0 0 20px 0; font-weight: 500;">
-        Play and listen to the samples in the trianing group column on the left. 
+        Play and listen to the samples in the training group column on the left. 
         Then listen to all options on the right, select your choice, rate your confidence, and click Submit.
       </p>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; background: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0;">
@@ -220,7 +224,6 @@ export function buildTrial(jsPsych: any, stimulus: TrialStimulus) {
           </div>
       </div>
 
-      <!-- Immediate Feedback Container -->
       <div id="feedback-message" style="margin-top: 18px; font-weight: bold; font-size: 1.15em; text-align: center; min-height: 1.4em;"></div>
     </div>
   `;
@@ -254,7 +257,6 @@ export function buildTrial(jsPsych: any, stimulus: TrialStimulus) {
         );
         const radios = document.querySelectorAll<HTMLInputElement>('input[name="test-choice"]');
         const confidenceInputs = document.querySelectorAll<HTMLInputElement>('input[name="confidence-rating"]');
-        // const feedbackEl = document.getElementById("feedback-message");
 
         const listenedTestOptions = new Set<number>();
         let isSubmitted = false;
@@ -331,46 +333,49 @@ export function buildTrial(jsPsych: any, stimulus: TrialStimulus) {
         });
 
         audioElements.forEach((audio) => {
-          audio.addEventListener("play", () => updateButtonStates(true));
+          audio.addEventListener("play", () => {
+            updateButtonStates(true);
+            const audioId = audio.id;
+            audioPlaybackOrder.push(audioId);
+            audioPlaybackCounts[audioId] = (audioPlaybackCounts[audioId] || 0) + 1;
+          });
           audio.addEventListener("ended", () => updateButtonStates(false));
           audio.addEventListener("pause", () => updateButtonStates(false));
           audio.addEventListener("error", () => updateButtonStates(false));
         });
 
-        // Intercept Submit button click for automated feedback phase
         if (submitBtn) {
           submitBtn.addEventListener("click", (e) => {
             if (isSubmitted) return;
             
-            // Prevent instant trial termination
             e.preventDefault();
             e.stopPropagation();
 
             isSubmitted = true;
 
-            // Disable all interactive components
+            const selectedRadio = document.querySelector<HTMLInputElement>('input[name="test-choice"]:checked');
+            const selectedConfidence = document.querySelector<HTMLInputElement>('input[name="confidence-rating"]:checked');
+
+            userResponse = selectedRadio ? parseInt(selectedRadio.value, 10) : null;
+            userConfidence = selectedConfidence ? parseInt(selectedConfidence.value, 10) : null;
+
             submitBtn.disabled = true;
             radios.forEach((r) => (r.disabled = true));
             confidenceInputs.forEach((c) => (c.disabled = true));
             updateButtonStates(true);
 
-            // Stop audio playback
             audioElements.forEach((a) => a.pause());
 
-            // Check response accuracy
-            const selectedRadio = document.querySelector<HTMLInputElement>('input[name="test-choice"]:checked');
-            const selectedVal = selectedRadio ? parseInt(selectedRadio.value, 10) : null;
-            const isCorrect = selectedVal === correct_index;
+            // Visual feedback handling
+            const isCorrect = userResponse === correct_index;
 
-            // Highlight chosen option
-            if (selectedVal !== null) {
-              const selectedContainer = document.getElementById(`option-container-${selectedVal}`);
+            if (userResponse !== null) {
+              const selectedContainer = document.getElementById(`option-container-${userResponse}`);
               if (selectedContainer) {
                 selectedContainer.classList.add(isCorrect ? "choice-correct" : "choice-incorrect");
               }
             }
 
-            // Outline correct option if incorrect selection was made
             if (!isCorrect && correct_index !== null && correct_index >= 0) {
               const correctContainer = document.getElementById(`option-container-${correct_index}`);
               if (correctContainer) {
@@ -378,23 +383,11 @@ export function buildTrial(jsPsych: any, stimulus: TrialStimulus) {
               }
             }
 
-            // // Render feedback message
-            // if (feedbackEl) {
-            //   if (isCorrect) {
-            //     feedbackEl.style.color = COLORS.successText;
-            //     feedbackEl.innerHTML = "✓ Correct";
-            //   } else {
-            //     feedbackEl.style.color = COLORS.errorText;
-            //     feedbackEl.innerHTML = `✕ Incorrect`;
-            //   }
-            // }
 
-            // Automatically proceed to the next trial after duration
             setTimeout(() => {
               if (jsPsych && typeof jsPsych.finishTrial === "function") {
                 jsPsych.finishTrial();
               } else {
-                // Fallback click trigger for standard button handling
                 submitBtn.click();
               }
             }, FEEDBACK_DURATION_MS);
@@ -402,15 +395,10 @@ export function buildTrial(jsPsych: any, stimulus: TrialStimulus) {
         }
       },
       on_finish: (data: Record<string, any>) => {
-        const selectedRadio = document.querySelector<HTMLInputElement>('input[name="test-choice"]:checked');
-        const selectedConfidence = document.querySelector<HTMLInputElement>('input[name="confidence-rating"]:checked');
-
-        const selectedValue = selectedRadio ? parseInt(selectedRadio.value, 10) : null;
-        const confidenceValue = selectedConfidence ? parseInt(selectedConfidence.value, 10) : null;
-
-        data.response = selectedValue;
-        data.correct = selectedValue === correct_index;
-        data.confidence = confidenceValue;
+        data.response = userResponse;
+        data.confidence = userConfidence;
+        data.audio_playback_order = audioPlaybackOrder;
+        data.audio_playback_counts = audioPlaybackCounts;
 
         if (jsPsych && typeof jsPsych.setProgressBar === "function") {
           const currentProgress = jsPsych.getProgress();

@@ -83,7 +83,6 @@ export function initExperiment() {
   const actualTrialCount = stimuli ? stimuli.length : 0;
   let completedActualTrials = 0;
   let progressValueElement: HTMLSpanElement | null = null;
-  let mainExperimentStarted = false;
 
   const updateProgressValue = () => {
     if (progressValueElement) {
@@ -134,7 +133,6 @@ export function initExperiment() {
 
     on_trial_finish: (data: any) => {
       if (data?.task === "start_experiment_screen") {
-        mainExperimentStarted = true;
         completedActualTrials = 0;
 
         if (jsPsych.progressBar) {
