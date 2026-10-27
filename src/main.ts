@@ -4,24 +4,38 @@ import "./assets/style.css";
 
 import { consent } from "./trial/consent"; 
 import { overview } from "./trial/overview.ts";
-import { getPracticeTrials } from "./trial/practiceTrials.ts"
+import { getPracticeTimeline } from "./trial/practiceTrials"
 import { createHeadphoneCheck } from "./trial/headphoneCheck"
 import { getInstructions } from "./trial/instructions";
 import { buildComprehensionTimeline } from "./trial/comprehensionCheck";
 import { startPracticeTrials } from "./trial/startPracticeTrials.ts";
 import { startExperiment } from "./trial/startExperiment.ts";
 
-import { buildBlockTimeline } from "./trial/blockBuilder.ts"
+import { buildBlockTimeline } from "./trial/buildBlocks"
 import { stimuli } from "./utils/stimuli";
 import { transition } from "./trial/transition";
 import { buildGoldMSITimeline } from "./trial/goldMSI";
 import { buildDemographicsTimeline } from "./trial/demographics"; 
 import { debrief } from "./trial/debrief";
 
+export type Phase = "practice" | "main"
+
 const urlParams = new URLSearchParams(window.location.search);
 const isProlific = urlParams.has('PROLIFIC_PID');
 const prolificStudyId = urlParams.get('STUDY_ID');
 const prolificSessionId = urlParams.get('SESSION_ID'); 
+
+// Helper to randomly sample N unique indices from an array length
+function getRandomIndices(max: number, count: number): number[] {
+    const indices: number[] = [];
+    while (indices.length < count && indices.length < max) {
+        const rand = Math.floor(Math.random() * max);
+        if (!indices.includes(rand)) {
+            indices.push(rand);
+        }
+    }
+    return indices;
+}
 
 // Helper for saving json result for local save
 function downloadJson(data: object, filename: string) {
@@ -36,6 +50,12 @@ export function initExperiment() {
     urlParams.get("PROLIFIC_PID") ??
     urlParams.get("pid") ??
     crypto.randomUUID();
+  
+  // ==========================================================
+  // PARTITION TRIALS: 3 Random Practice Trials vs Main Trials
+  // ==========================================================
+  const practiceIndices = getRandomIndices(stimuli.length, 2);
+  const mainStimuli = stimuli.filter((_, index) => !practiceIndices.includes(index));
 
   const compactResults = (rows: any[]) =>
     rows
@@ -80,70 +100,49 @@ export function initExperiment() {
 
   document.body.classList.add("experiment-progress-hidden");
 
-  const actualTrialCount = stimuli ? stimuli.length : 0;
+  // Use mainStimuli length for the true experiment trial count
+  const actualTrialCount = mainStimuli.length;
   let completedActualTrials = 0;
-  let progressValueElement: HTMLSpanElement | null = null;
-
-  const updateProgressValue = () => {
-    if (progressValueElement) {
-      progressValueElement.textContent = `${completedActualTrials}/${actualTrialCount} trials`;
-    }
-  };
-
-  const ensureProgressValueElement = () => {
-    const progressContainer = document.getElementById("jspsych-progressbar-container");
-    if (!progressContainer) return;
-
-    progressValueElement = progressContainer.querySelector<HTMLSpanElement>(
-      ".experiment-progress-value"
-    );
-
-    if (!progressValueElement) {
-      progressValueElement = document.createElement("span");
-      progressValueElement.className = "experiment-progress-value";
-      progressContainer.appendChild(progressValueElement);
-    }
-
-    updateProgressValue();
-  };
+  let mainExperimentStarted = false;
 
   const jsPsych = initJsPsych({
     show_progress_bar: true,
     auto_update_progress_bar: false,
-    message_progress_bar: () => `<span class="experiment-progress-label">Progress</span>`,
-
+    
+    message_progress_bar: () => {
+      return `<span class="experiment-progress-label">Progress:  <strong>${completedActualTrials}/${actualTrialCount}</strong> trials</span>`;
+    },
+    
     auto_preload: false,
     use_webaudio: false,
     override_safe_mode: true,
 
     on_trial_start: (trial: any) => {
-      const task = trial?.data?.task;
+      if (trial?.data?.task === "gold_msi" || trial?.data?.task === "gold_msi_mixed" || trial?.data?.task === "gold_msi_sliders") {
+        document.body.classList.remove("experiment-progress-visible");
+        document.body.classList.add("experiment-progress-hidden");
+        return;
+      }
 
+      // Explicitly hide during practice or before the main experiment starts
+      if (!mainExperimentStarted || trial?.data?.phase === "practice") {
+        document.body.classList.remove("experiment-progress-visible");
+        document.body.classList.add("experiment-progress-hidden");
+        return;
+      }
 
-    // Reveal ONLY during actual main experiment classification trials
-    if (task === "classification" && !document.body.classList.contains("in-practice-phase")) {
       document.body.classList.remove("experiment-progress-hidden");
       document.body.classList.add("experiment-progress-visible");
-      ensureProgressValueElement();
-    } else {
-      document.body.classList.remove("experiment-progress-visible");
-      document.body.classList.add("experiment-progress-hidden");
-    }
-  },
+    },
 
     on_trial_finish: (data: any) => {
       if (data?.task === "start_experiment_screen") {
+        mainExperimentStarted = true;
         completedActualTrials = 0;
 
         if (jsPsych.progressBar) {
           jsPsych.progressBar.progress = 0;
         }
-
-        updateProgressValue();
-        return;
-      }
-
-      if (data?.task !== "classification") {
         return;
       }
 
@@ -152,8 +151,6 @@ export function initExperiment() {
       if (jsPsych.progressBar) {
         jsPsych.progressBar.progress = Math.min(completedActualTrials / actualTrialCount, 1);
       }
-
-      updateProgressValue();
     },
 
     on_finish: async (data: any) => {
@@ -187,51 +184,48 @@ export function initExperiment() {
 
   const timeline = [];
 
-  timeline.push(consent);
-  timeline.push(overview);
+  // timeline.push(consent);
+  // timeline.push(overview);
 
-  const headphoneCheck = createHeadphoneCheck(jsPsych, { trialCount: 6, passMark: 6 });
-  timeline.push(...headphoneCheck);
+  // const headphoneCheck = createHeadphoneCheck(jsPsych, { trialCount: 6, passMark: 6 });
+  // timeline.push(...headphoneCheck);
 
-  timeline.push({
-    timeline: [
-      getInstructions(), 
-      ...buildComprehensionTimeline(jsPsych)
-    ],
-    loop_function: (data: any) => {
-      const checkData = data.filter({ task: "comprehension_check" }).values();
-      const playCountSelection = checkData[0]?.response;
-      const classificationSelection = checkData[1]?.response;
-      const passed = playCountSelection === "As many times as I need" && classificationSelection === "Pick the option that belongs to the training group";
-      if (!passed) { alert("One or more answers were incorrect. Please review instructions."); }
-      return !passed;
-    }
-  });
+  // timeline.push({
+  //   timeline: [
+  //     getInstructions(), 
+  //     ...buildComprehensionTimeline(jsPsych)
+  //   ],
+  //   loop_function: (data: any) => {
+  //     const checkData = data.filter({ task: "comprehension_check" }).values();
+  //     const playCountSelection = checkData[0]?.response;
+  //     const classificationSelection = checkData[1]?.response;
+  //     const passed = playCountSelection === "As many times as I need" && classificationSelection === "Pick the option that belongs to the training group";
+  //     if (!passed) { alert("One or more answers were incorrect. Please review instructions."); }
+  //     return !passed;
+  //   }
+  // });
 
-  timeline.push(startPracticeTrials());
-  timeline.push({
-    timeline:[
-    ...getPracticeTrials(jsPsych)]
-  });
+  // timeline.push(startPracticeTrials());
+  timeline.push(getPracticeTimeline(jsPsych, practiceIndices));
 
 
-  timeline.push({
-    ...startExperiment(),
-    on_finish: () => {
-      document.body.classList.remove("state-instructions");
-      document.body.classList.remove("in-practice-phase");
-      document.body.classList.add("experiment-progress-hidden");
-    }
-  });
+  // timeline.push({
+  //   ...startExperiment(),
+  //   on_finish: () => {
+  //     document.body.classList.remove("state-instructions");
+  //     document.body.classList.remove("in-practice-phase");
+  //     document.body.classList.add("experiment-progress-hidden");
+  //   }
+  // });
 
-  // Build and deploy the counterbalanced blocks timeline
-  const experimentalBlocks = buildBlockTimeline(jsPsych, stimuli, participantId);
-  timeline.push(...experimentalBlocks);
+  // // Build and deploy the counterbalanced blocks timeline
+  // const experimentalBlocks = buildBlockTimeline(jsPsych, mainStimuli);
+  // timeline.push(...experimentalBlocks);
 
-  timeline.push(transition);
-  timeline.push(...buildGoldMSITimeline());
-  timeline.push(...buildDemographicsTimeline(),)
-  timeline.push(debrief);
+  // timeline.push(transition);
+  // timeline.push(...buildGoldMSITimeline());
+  // timeline.push(...buildDemographicsTimeline(),)
+  // timeline.push(debrief);
 
   jsPsych.run(timeline);
 }

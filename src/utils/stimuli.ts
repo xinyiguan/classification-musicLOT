@@ -1,54 +1,36 @@
+import rawTrials from './trialInfos.json';
+
+
 export interface TrialStimulus {
     trial_id: string;
-    trainAudio: string[];         // G1
-    testAudio: string[];        // [G2, G3, etc.] depending on Type
-    correct_index: number;  // Index in options array, or -1 for "No Match"
-    tier: 1 | 2 | 3 | 4;    // Complexity tier 
-    foil_type: "1" | "2" | "3" | "4a" | "4b";
+    train: string[];
+    test: string[];
+    correctChoice: number
+}
+
+// interface representing the raw structure in trialInfos.json
+interface RawTrialItem {
+    trial: {
+        correctChoice: string;
+        test: number[],
+        train:number[];
+    };
 }
 
 const base = import.meta.env.BASE_URL;  // <-- ensure the audio path relative to the repo 
 
-export const stimuli: TrialStimulus[] = [
-    {
-        trial_id: "trial_001",
-        trainAudio: [`${base}audio/sample.wav`,`${base}audio/sample.wav`,`${base}audio/sample.wav`],
-        testAudio: [`${base}audio/sample.wav`,`${base}audio/sample.wav`],
-        correct_index: 1,
-        tier: 2, 
-        foil_type:"2"
-    },
-        {
-        trial_id: "trial_002",
-        trainAudio: [`${base}audio/sample.wav`],
-        testAudio: [`${base}audio/sample.wav`,`${base}audio/sample.wav`],
-        correct_index: 0,
-        tier: 1, 
-        foil_type:"2"
-    },
-        {
-        trial_id: "trial_003",
-        trainAudio: [`${base}audio/sample.wav`,`${base}audio/sample.wav`],
-        testAudio: [`${base}audio/sample.wav`,`${base}audio/sample.wav`],
-        correct_index: 1,
-        tier: 4, 
-        foil_type:"2"
-    },
-        {
-        trial_id: "trial_004",
-        trainAudio: [`${base}audio/sample.wav`],
-        testAudio: [`${base}audio/sample.wav`,`${base}audio/sample.wav`],
-        correct_index: 1,
-        tier: 3, 
-        foil_type:"2"
-    },
-        {
-        trial_id: "trial_005",
-        trainAudio: [`${base}audio/sample.wav`],
-        testAudio: [`${base}audio/sample.wav`,`${base}audio/sample.wav`],
-        correct_index: 0,
-        tier: 2, 
-        foil_type:"2"
-    },
-];
-
+export const stimuli: TrialStimulus[] = (rawTrials as RawTrialItem[]).map((item, index) => {
+    let correctVal = -1;
+    if (item.trial.correctChoice === "First"){
+        correctVal = 0;
+    } else if (item.trial.correctChoice === "Second"){
+        correctVal = 1;
+    }
+    return {
+        trial_id: `trial_${index}`,
+        train: item.trial.train.map((id) => `${base}experimentData/classification/Stimuli/wav/${id}.wav`),  
+        test: item.trial.test.map((id) => `${base}experimentData/classification/Stimuli/wav/${id}.wav`),   
+        correctChoice: correctVal
+    }
+}
+)

@@ -26,15 +26,15 @@ interface HeadphoneCheckSettings {
 const BASE = import.meta.env.BASE_URL || "/";
 
 const defaultSettings: HeadphoneCheckSettings = {
-    volumeSound: `${BASE}hc/Antiphase_calibration.flac`,
-    checkExample: `${BASE}hc/Antiphase_HC_ISO.flac`,
+    volumeSound: `${BASE}experimentData/hc/Antiphase_calibration.flac`,
+    checkExample: `${BASE}experimentData/hc/Antiphase_HC_ISO.flac`,
     checkSounds: [
-        { answer: 3, file: `${BASE}hc/Antiphase_HC_OIS.flac` },
-        { answer: 2, file: `${BASE}hc/Antiphase_HC_OSI.flac` },
-        { answer: 1, file: `${BASE}hc/Antiphase_HC_SIO.flac` },
-        { answer: 1, file: `${BASE}hc/Antiphase_HC_SOI.flac` },
-        { answer: 3, file: `${BASE}hc/Antiphase_HC_IOS.flac` },
-        { answer: 2, file: `${BASE}hc/Antiphase_HC_ISO.flac` },
+        { answer: 3, file: `${BASE}experimentData/hc/Antiphase_HC_OIS.flac` },
+        { answer: 2, file: `${BASE}experimentData/hc/Antiphase_HC_OSI.flac` },
+        { answer: 1, file: `${BASE}experimentData/hc/Antiphase_HC_SIO.flac` },
+        { answer: 1, file: `${BASE}experimentData/hc/Antiphase_HC_SOI.flac` },
+        { answer: 3, file: `${BASE}experimentData/hc/Antiphase_HC_IOS.flac` },
+        { answer: 2, file: `${BASE}experimentData/hc/Antiphase_HC_ISO.flac` },
     ],
     trialCount: 6,
     passMark: 5,
