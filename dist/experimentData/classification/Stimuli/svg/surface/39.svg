@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="960px" height="347px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" id="fqyrm02">
+   <desc>Engraved by Verovio 6.3.0</desc>
+   <defs>
+      <g id="E050-fqyrm02">
+         <path transform="scale(1,-1)" d="M441 -245c-23 -4 -48 -6 -76 -6c-59 0 -102 7 -130 20c-88 42 -150 93 -187 154c-26 44 -43 103 -48 176c0 6 -1 13 -1 19c0 54 15 111 45 170c29 57 65 106 110 148s96 85 153 127c-3 16 -8 46 -13 92c-4 43 -5 73 -5 89c0 117 16 172 69 257c34 54 64 82 89 82 c21 0 43 -30 69 -92s39 -115 41 -159v-15c0 -109 -21 -162 -67 -241c-13 -20 -63 -90 -98 -118c-13 -9 -25 -19 -37 -29l31 -181c8 1 18 2 28 2c58 0 102 -12 133 -35c59 -43 92 -104 98 -184c1 -7 1 -15 1 -22c0 -123 -87 -209 -181 -248c8 -57 17 -110 25 -162 c5 -31 6 -58 6 -80c0 -30 -5 -53 -14 -70c-35 -64 -88 -99 -158 -103c-5 0 -11 -1 -16 -1c-37 0 -72 10 -108 27c-50 24 -77 59 -80 105v11c0 29 7 55 20 76c18 28 45 42 79 44h6c49 0 93 -42 97 -87v-9c0 -51 -34 -86 -105 -106c17 -24 51 -36 102 -36c62 0 116 43 140 85 c9 16 13 41 13 74c0 20 -1 42 -5 67c-8 53 -18 106 -26 159zM461 939c-95 0 -135 -175 -135 -286c0 -24 2 -48 5 -71c50 39 92 82 127 128c40 53 60 100 60 140v8c-4 53 -22 81 -55 81h-2zM406 119l54 -326c73 25 110 78 110 161c0 7 0 15 -1 23c-7 95 -57 142 -151 142h-12 zM382 117c-72 -2 -128 -47 -128 -120v-7c2 -46 43 -99 75 -115c-3 -2 -7 -5 -10 -10c-70 33 -116 88 -123 172v11c0 68 44 126 88 159c23 17 49 29 78 36l-29 170c-21 -13 -52 -37 -92 -73c-50 -44 -86 -84 -109 -119c-45 -69 -67 -130 -67 -182v-13c5 -68 35 -127 93 -176 s125 -73 203 -73c25 0 50 3 75 9c-19 111 -36 221 -54 331z" />
+      </g>
+      <g id="E080-fqyrm02">
+         <path transform="scale(1,-1)" d="M229 251zM230 -250c-99 0 -210 94 -210 251c0 152 93 250 209 250s205 -119 205 -250c0 -139 -103 -251 -204 -251zM139 1c0 -79 13 -215 88 -215c68 0 84 112 84 215c0 76 -15 216 -84 216c-68 0 -88 -136 -88 -216z" />
+      </g>
+      <g id="E0A4-fqyrm02">
+         <path transform="scale(1,-1)" d="M0 -39c0 68 73 172 200 172c66 0 114 -37 114 -95c0 -84 -106 -171 -218 -171c-64 0 -96 30 -96 94z" />
+      </g>
+      <g id="E0A2-fqyrm02">
+         <path transform="scale(1,-1)" d="M198 133c102 0 207 -45 207 -133c0 -92 -118 -133 -227 -133c-101 0 -178 46 -178 133c0 88 93 133 198 133zM293 -21c0 14 -3 29 -8 44c-7 20 -18 38 -33 54c-20 21 -43 31 -68 31l-20 -2c-15 -5 -27 -14 -36 -28c-4 -9 -6 -17 -8 -24s-3 -16 -3 -27c0 -15 3 -34 9 -57 s18 -41 34 -55c15 -15 36 -23 62 -23c4 0 10 1 18 2c19 5 32 15 40 30s13 34 13 55z" />
+      </g>
+   </defs>
+   <style type="text/css">#fqyrm02 g.ending, #fqyrm02 g.fing, #fqyrm02 g.reh, #fqyrm02 g.tempo {font-weight:bold;}#fqyrm02 g.dir, #fqyrm02 g.dynam, #fqyrm02 g.mNum {font-style:italic;}#fqyrm02 g.label {font-weight:normal;}#fqyrm02 ellipse, #fqyrm02 path, #fqyrm02 polygon, #fqyrm02 polyline, #fqyrm02 rect {stroke:currentColor}#fqyrm02 g.cursor {fill:dodgerblue; color:dodgerblue;}#fqyrm02 g.cursor.chord {fill:limegreen; color:limegreen;}</style>
+   <svg class="definition-scale" color="black" font-family="Times, serif" viewBox="0 0 12000 4330">
+      <g class="page-margin" transform="translate(500, 500)">
+         <g id="g171f7us" class="mdiv pageMilestone" />
+         <g id="k10igy7e" class="score pageMilestone" />
+         <g id="k1rto04c" class="system">
+            <g id="x16f26is" class="section systemMilestone" />
+            <g id="abcLine06" class="pb" />
+            <g id="jzwdcdm" class="measure">
+               <g id="sny0e0y" class="staff">
+                  <path d="M0 2073 L11000 2073" stroke-width="13" />
+                  <path d="M0 2253 L11000 2253" stroke-width="13" />
+                  <path d="M0 2433 L11000 2433" stroke-width="13" />
+                  <path d="M0 2613 L11000 2613" stroke-width="13" />
+                  <path d="M0 2793 L11000 2793" stroke-width="13" />
+                  <g id="s9dnma0" class="clef">
+                     <use xlink:href="#E050-fqyrm02" transform="translate(90, 2613) scale(0.72, 0.72)" />
+                  </g>
+                  <g id="t1bnt3me" class="keySig" />
+                  <g id="u1mx4qel" class="meterSig">
+                     <use xlink:href="#E080-fqyrm02" transform="translate(721, 2433) scale(0.72, 0.72)" />
+                  </g>
+                  <g id="zdiaecx" class="layer">
+                     <g id="d1fj24cj" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-fqyrm02" transform="translate(1195, 2343) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="f9eh7tp" class="stem">
+                           <path d="M1204 2371 L1204 2973" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="g1kgc2sg" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-fqyrm02" transform="translate(1414, 2433) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="ggi6xjw" class="stem">
+                           <path d="M1423 2461 L1423 3033" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="j9o2uy" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-fqyrm02" transform="translate(1632, 2523) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="h1u5fj5q" class="stem">
+                           <path d="M1849 2495 L1849 1893" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="m1kbzja1" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-fqyrm02" transform="translate(1851, 2343) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="if5znjt" class="stem">
+                           <path d="M1860 2371 L1860 2973" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="o1gtwoy" class="beam">
+                        <polygon points="2278,1803 3738,1803 3738,1893 2278,1893" />
+                        <g id="pf8xxx4" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(2070, 2433) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="j103zb9" class="stem">
+                              <path d="M2287 2405 L2287 1821" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="s1smm5ul" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(2284, 2523) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="k9n2p01" class="stem">
+                              <path d="M2501 2495 L2501 1821" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="v1r7bz" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(2498, 2613) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="l11ht1i1" class="stem">
+                              <path d="M2715 2585 L2715 1821" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="yraoylk" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(2713, 2433) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="mjdsb4n" class="stem">
+                              <path d="M2930 2405 L2930 1821" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="b1aa7bw9" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(2909, 2343) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="nmhfcak" class="stem">
+                              <path d="M3126 2315 L3126 1821" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="e7xrski" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(3106, 2433) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="ohjyvkv" class="stem">
+                              <path d="M3323 2405 L3323 1821" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="h2hln3k" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(3320, 2523) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="p11c8df3" class="stem">
+                              <path d="M3537 2495 L3537 1821" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="k1k3mt07" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(3512, 2343) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="q6gvogr" class="stem">
+                              <path d="M3729 2315 L3729 1821" stroke-width="18" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="n1u7r0cw" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-fqyrm02" transform="translate(3686, 2253) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="r16cga13" class="stem">
+                           <path d="M3695 2281 L3695 2883" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="r19szms0" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-fqyrm02" transform="translate(3905, 2343) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="sojcidy" class="stem">
+                           <path d="M3914 2371 L3914 2973" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="u1brvraq" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-fqyrm02" transform="translate(4124, 2433) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="tj7mb6q" class="stem">
+                           <path d="M4133 2461 L4133 3033" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="xgadque" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-fqyrm02" transform="translate(4342, 2253) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="ub6zreb" class="stem">
+                           <path d="M4351 2281 L4351 2883" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="z1sxzgj5" class="beam">
+                        <polygon points="4561,3063 6022,3063 6022,2973 4561,2973" />
+                        <g id="a1fdtyu0" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(4561, 2343) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="v1k0ayci" class="stem">
+                              <path d="M4570 2371 L4570 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="d1vw6z6o" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(4775, 2433) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="w1cbrrvm" class="stem">
+                              <path d="M4784 2461 L4784 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="gvat3oq" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(4990, 2523) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="xzbug9t" class="stem">
+                              <path d="M4999 2551 L4999 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="jp9sb3s" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(5204, 2343) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="y1h0j79v" class="stem">
+                              <path d="M5213 2371 L5213 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="m1epzeox" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(5401, 2253) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="z14209hz" class="stem">
+                              <path d="M5410 2281 L5410 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="pmjqgvz" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(5597, 2343) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="a3pocn1" class="stem">
+                              <path d="M5606 2371 L5606 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="s17znl8i" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(5811, 2433) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="b6wokpo" class="stem">
+                              <path d="M5820 2461 L5820 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="vrmm9lj" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(6004, 2253) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="c4o8o7l" class="stem">
+                              <path d="M6013 2281 L6013 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="y1tgzg0n" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-fqyrm02" transform="translate(6195, 2163) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="ddv2vvc" class="stem">
+                           <path d="M6204 2191 L6204 2793" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="c4jwyy6" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-fqyrm02" transform="translate(6414, 2253) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="eygoka4" class="stem">
+                           <path d="M6423 2281 L6423 2883" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="fehr469" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-fqyrm02" transform="translate(6633, 2343) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="flvnwnk" class="stem">
+                           <path d="M6642 2371 L6642 2973" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="ilfes3x" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-fqyrm02" transform="translate(6852, 2163) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="gc7j3p9" class="stem">
+                           <path d="M6861 2191 L6861 2793" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="ikf17nl" class="beam">
+                        <polygon points="7070,3063 10223,3063 10223,2973 7070,2973" />
+                        <g id="ljv2htd" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(7070, 2253) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="h6ofts" class="stem">
+                              <path d="M7079 2281 L7079 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="o1tyxzd" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(7285, 2343) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="i10rivpz" class="stem">
+                              <path d="M7294 2371 L7294 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="r1psq0su" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(7499, 2433) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="jkj32y7" class="stem">
+                              <path d="M7508 2461 L7508 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="u1lmx8np" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(7713, 2253) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="k1e5qw1e" class="stem">
+                              <path d="M7722 2281 L7722 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="xwsmd67" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(7928, 2343) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="ljiq4vl" class="stem">
+                              <path d="M7937 2371 L7937 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="a1d5b27" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(8142, 2433) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="mpp53pm" class="stem">
+                              <path d="M8151 2461 L8151 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="d1xtcepm" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(8356, 2523) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="n1dg2tf2" class="stem">
+                              <path d="M8365 2551 L8365 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="g1s562u3" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(8571, 2343) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="oxotdf3" class="stem">
+                              <path d="M8580 2371 L8580 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="j2ydobb" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(8767, 2163) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="p1yb1e7j" class="stem">
+                              <path d="M8776 2191 L8776 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="m16uume7" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(8964, 2073) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="qg7o30k" class="stem">
+                              <path d="M8973 2101 L8973 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="pxwtk7o" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(9178, 1983) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="rkd06gl" class="stem">
+                              <path d="M9187 2011 L9187 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="s1ynzoce" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(9370, 2163) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="s1hsr2rw" class="stem">
+                              <path d="M9379 2191 L9379 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="v14x2gje" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(9562, 2253) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="t14o1y0y" class="stem">
+                              <path d="M9571 2281 L9571 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="y1wxt1js" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(9776, 2163) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="u7lttp" class="stem">
+                              <path d="M9785 2191 L9785 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="bwi24fk" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(9991, 2073) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="vhkddbi" class="stem">
+                              <path d="M10000 2101 L10000 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="e1ay2t1t" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-fqyrm02" transform="translate(10205, 2253) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="w12lo59x" class="stem">
+                              <path d="M10214 2281 L10214 3045" stroke-width="18" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="hro9had" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A2-fqyrm02" transform="translate(10385, 2343) scale(0.72, 0.72)" />
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="amtnrty" class="harm">
+                  <text x="1308" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="b1l2gtap" class="text">
+                        <tspan font-size="405px">B</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="eoz071v" class="harm">
+                  <text x="1527" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="fqn9yk8" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="h14dm0id" class="harm">
+                  <text x="1745" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="i6hi4wf" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="k85k22h" class="harm">
+                  <text x="1964" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="lluoxgz" class="text">
+                        <tspan font-size="405px">E</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="n1yb16xh" class="harm">
+                  <text x="2183" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="oihxs7f" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="q1m8t21g" class="harm">
+                  <text x="2397" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="r1epfv9y" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="t1lnoee7" class="harm">
+                  <text x="2611" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="u1ai602" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="wrbu5kx" class="harm">
+                  <text x="2826" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="x19jmz7b" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="z5gkssh" class="harm">
+                  <text x="3022" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="a1pn3usp" class="text">
+                        <tspan font-size="405px">B</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="c1sjqm9e" class="harm">
+                  <text x="3219" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="d18tmpwj" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="fj3jx4f" class="harm">
+                  <text x="3433" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="g96z2vm" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="iivnbi5" class="harm">
+                  <text x="3625" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="jgxyns8" class="text">
+                        <tspan font-size="405px">E</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="l1vb280h" class="harm">
+                  <text x="3799" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="mqti0o5" class="text">
+                        <tspan font-size="405px">B</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="p1vosyrh" class="harm">
+                  <text x="4018" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="qrll9d2" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="s1qs2j6p" class="harm">
+                  <text x="4237" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="ts9j98k" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="v1sw1d3q" class="harm">
+                  <text x="4455" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="w2wi9kc" class="text">
+                        <tspan font-size="405px">E</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="y1xzblki" class="harm">
+                  <text x="4674" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="z15kmfky" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="b1odgtkg" class="harm">
+                  <text x="4888" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="c11cfhs3" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="e13l260f" class="harm">
+                  <text x="5103" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="f12oien7" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="hjfqlrq" class="harm">
+                  <text x="5317" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="i16qurp7" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="k1gxj466" class="harm">
+                  <text x="5514" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="l1cjewkr" class="text">
+                        <tspan font-size="405px">B</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="n9oh11i" class="harm">
+                  <text x="5710" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="ohko1bh" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="q62zr0n" class="harm">
+                  <text x="5924" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="r16o4yzk" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="t106y4pd" class="harm">
+                  <text x="6117" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="u1cgrv7v" class="text">
+                        <tspan font-size="405px">E</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="wb9pofz" class="harm">
+                  <text x="6308" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="xzu8rb6" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="a295ch" class="harm">
+                  <text x="6527" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="bi98pc5" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="dq83t0a" class="harm">
+                  <text x="6746" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="e1xa902l" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="g1xglma2" class="harm">
+                  <text x="6965" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="h1xmj2dg" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="j1kav4ac" class="harm">
+                  <text x="7183" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="k1lbxf7l" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="m1wfo7al" class="harm">
+                  <text x="7398" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="n17nyywg" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="p1mi79bf" class="harm">
+                  <text x="7612" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="q1csw5id" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="s1puoztf" class="harm">
+                  <text x="7826" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="t19da5sj" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="v1nur988" class="harm">
+                  <text x="8041" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="w1e37qxo" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="ym5l9uk" class="harm">
+                  <text x="8255" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="z6faqo9" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="b1hld0yj" class="harm">
+                  <text x="8469" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="c199of1x" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="e1lbmpaz" class="harm">
+                  <text x="8684" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="fgh46pd" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="h1tphu5y" class="harm">
+                  <text x="8880" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="iza5por" class="text">
+                        <tspan font-size="405px">B</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="ke2h46a" class="harm">
+                  <text x="9077" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="l1evw1mw" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="nsieo7n" class="harm">
+                  <text x="9291" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="osa7r96" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="q199uubp" class="harm">
+                  <text x="9483" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="r1d060a3" class="text">
+                        <tspan font-size="405px">E</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="t1aet3iu" class="harm">
+                  <text x="9675" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="u1ubd9bo" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="w1a7zuc9" class="harm">
+                  <text x="9889" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="x1qnf272" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="z9vo4ag" class="harm">
+                  <text x="10104" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="a1y5pt1j" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="cxi2rle" class="harm">
+                  <text x="10318" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="d1psh3k6" class="text">
+                        <tspan font-size="405px">M</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="f1heup8q" class="harm">
+                  <text x="10530" y="814" text-anchor="middle" font-size="0px">
+                     <tspan id="g1h7cl4g" class="text">
+                        <tspan font-size="405px">E</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="r1i8p7jg" class="barLine">
+                  <path d="M10888 2073 L10888 2793" stroke-width="27" />
+                  <path d="M10987 2073 L10987 2793" stroke-width="27" />
+               </g>
+            </g>
+            <g id="abcLine08" class="sb" />
+            <g id="c1fxbi8v" class="systemMilestoneEnd x16f26is" />
+         </g>
+         <g id="d19gp5uz" class="pageMilestoneEnd k10igy7e" />
+         <g id="e1hcri5u" class="pageMilestoneEnd g171f7us" />
+         <g id="u19om5ix" class="pgHead">
+            <text font-size="0px">
+               <tspan id="v178cwjw" class="rend" x="5500" y="278" text-anchor="middle">
+                  <tspan id="wgi2aol" class="text">
+                     <tspan font-size="405px">Stimulus 39.abc</tspan>
+                  </tspan>
+               </tspan>
+            </text>
+         </g>
+      </g>
+   </svg>
+</svg>
