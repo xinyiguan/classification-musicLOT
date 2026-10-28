@@ -186,11 +186,11 @@ export function initExperiment() {
 
   const timeline = [];
 
-  // timeline.push(consent);
-  // timeline.push(overview);
+  timeline.push(consent);
+  timeline.push(overview);
 
-  // const headphoneCheck = createHeadphoneCheck(jsPsych, { trialCount: 6, passMark: 6 });
-  // timeline.push(...headphoneCheck);
+  const headphoneCheck = createHeadphoneCheck(jsPsych, { trialCount: 6, passMark: 6 });
+  timeline.push(...headphoneCheck);
 
   timeline.push({
     timeline: [
@@ -207,27 +207,27 @@ export function initExperiment() {
     }
   });
 
-  // timeline.push(startPracticeTrials());
-  // timeline.push(getPracticeTimeline(jsPsych, practiceIndices));
+  timeline.push(startPracticeTrials());
+  timeline.push(getPracticeTimeline(jsPsych, practiceIndices));
 
 
-  // timeline.push({
-  //   ...startExperiment(),
-  //   on_finish: () => {
-  //     document.body.classList.remove("state-instructions");
-  //     document.body.classList.remove("in-practice-phase");
-  //     document.body.classList.add("experiment-progress-hidden");
-  //   }
-  // });
+  timeline.push({
+    ...startExperiment(),
+    on_finish: () => {
+      document.body.classList.remove("state-instructions");
+      document.body.classList.remove("in-practice-phase");
+      document.body.classList.add("experiment-progress-hidden");
+    }
+  });
 
   // Build and deploy the counterbalanced blocks timeline
   const experimentalBlocks = buildBlockTimeline(jsPsych, mainStimuli);
   timeline.push(...experimentalBlocks);
 
-  // timeline.push(transition);
-  // timeline.push(...buildGoldMSITimeline());
-  // timeline.push(...buildDemographicsTimeline(),)
-  // timeline.push(debrief);
+  timeline.push(transition);
+  timeline.push(...buildGoldMSITimeline());
+  timeline.push(...buildDemographicsTimeline(),)
+  timeline.push(debrief);
 
   jsPsych.run(timeline);
 }
