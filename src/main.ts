@@ -146,10 +146,12 @@ export function initExperiment() {
         return;
       }
 
-      completedActualTrials += 1;
+      if (mainExperimentStarted && data?.phase !== "practice" && data?.task !== "gold_msi" && data?.task !=="demographics") {
+        completedActualTrials += 1;
 
-      if (jsPsych.progressBar) {
-        jsPsych.progressBar.progress = Math.min(completedActualTrials / actualTrialCount, 1);
+        if (jsPsych.progressBar) {
+          jsPsych.progressBar.progress = Math.min(completedActualTrials / actualTrialCount, 1);
+        }
       }
     },
 
@@ -190,23 +192,23 @@ export function initExperiment() {
   // const headphoneCheck = createHeadphoneCheck(jsPsych, { trialCount: 6, passMark: 6 });
   // timeline.push(...headphoneCheck);
 
-  // timeline.push({
-  //   timeline: [
-  //     getInstructions(), 
-  //     ...buildComprehensionTimeline(jsPsych)
-  //   ],
-  //   loop_function: (data: any) => {
-  //     const checkData = data.filter({ task: "comprehension_check" }).values();
-  //     const playCountSelection = checkData[0]?.response;
-  //     const classificationSelection = checkData[1]?.response;
-  //     const passed = playCountSelection === "As many times as I need" && classificationSelection === "Pick the option that belongs to the training group";
-  //     if (!passed) { alert("One or more answers were incorrect. Please review instructions."); }
-  //     return !passed;
-  //   }
-  // });
+  timeline.push({
+    timeline: [
+      getInstructions(), 
+      ...buildComprehensionTimeline(jsPsych)
+    ],
+    loop_function: (data: any) => {
+      const checkData = data.filter({ task: "comprehension_check" }).values();
+      const playCountSelection = checkData[0]?.response;
+      const classificationSelection = checkData[1]?.response;
+      const passed = playCountSelection === "As many times as I need" && classificationSelection === "Pick the option that belongs to the training group";
+      if (!passed) { alert("One or more answers were incorrect. Please review instructions."); }
+      return !passed;
+    }
+  });
 
   // timeline.push(startPracticeTrials());
-  timeline.push(getPracticeTimeline(jsPsych, practiceIndices));
+  // timeline.push(getPracticeTimeline(jsPsych, practiceIndices));
 
 
   // timeline.push({
@@ -218,9 +220,9 @@ export function initExperiment() {
   //   }
   // });
 
-  // // Build and deploy the counterbalanced blocks timeline
-  // const experimentalBlocks = buildBlockTimeline(jsPsych, mainStimuli);
-  // timeline.push(...experimentalBlocks);
+  // Build and deploy the counterbalanced blocks timeline
+  const experimentalBlocks = buildBlockTimeline(jsPsych, mainStimuli);
+  timeline.push(...experimentalBlocks);
 
   // timeline.push(transition);
   // timeline.push(...buildGoldMSITimeline());
