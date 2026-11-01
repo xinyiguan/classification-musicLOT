@@ -1,7 +1,7 @@
 import { JsPsych } from "jspsych";
 import jsPsychHtmlButtonResponse from "@jspsych/plugin-html-button-response";
 import { buildTrial } from "./buildTrials"; 
-import type { TrialStimulus } from "../utils/stimuli";
+import type { TrialStimulus } from "../stimuli";
 
 // Helper: Fisher-Yates Shuffle
 function shuffleArray<T>(array: T[]): T[] {

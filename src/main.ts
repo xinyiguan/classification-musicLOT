@@ -12,7 +12,7 @@ import { startPracticeTrials } from "./trial/startPracticeTrials.ts";
 import { startExperiment } from "./trial/startExperiment.ts";
 
 import { buildBlockTimeline } from "./trial/buildBlocks"
-import { stimuli } from "./utils/stimuli";
+import { stimuli } from "./stimuli.ts";
 import { transition } from "./trial/transition";
 import { buildGoldMSITimeline } from "./trial/goldMSI";
 import { buildDemographicsTimeline } from "./trial/demographics"; 

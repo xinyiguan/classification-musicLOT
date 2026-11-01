@@ -1,6 +1,6 @@
 import { JsPsych } from "jspsych";
 import { buildTrial } from "./buildTrials";
-import { stimuli } from "../utils/stimuli";
+import { stimuli } from "../stimuli";
 import type { Phase } from "../main";
 
 /**

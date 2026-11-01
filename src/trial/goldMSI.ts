@@ -1,5 +1,5 @@
 import jsPsychHtmlButtonResponse from "@jspsych/plugin-html-button-response";
-import * as goldUtils from "../utils/goldMSIQuestions";
+import * as goldUtils from "./goldMSIQuestions";
 
 const BYPASS_ANSWER_CHECK = false; // temporarily set to true to bypass required answer validation for faster testing
 

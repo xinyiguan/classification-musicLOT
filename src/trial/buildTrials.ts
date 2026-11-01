@@ -1,5 +1,5 @@
 import jsPsychHtmlButtonResponse from "@jspsych/plugin-html-button-response";
-import type { TrialStimulus } from "../utils/stimuli";
+import type { TrialStimulus } from "../stimuli";
 import type { Phase } from "../main";
 
 // ============================================================================
