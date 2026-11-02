@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="960px" height="786px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" id="o1fewgm9">
+   <desc>Engraved by Verovio 6.3.0</desc>
+   <defs>
+      <g id="E050-o1fewgm9">
+         <path transform="scale(1,-1)" d="M441 -245c-23 -4 -48 -6 -76 -6c-59 0 -102 7 -130 20c-88 42 -150 93 -187 154c-26 44 -43 103 -48 176c0 6 -1 13 -1 19c0 54 15 111 45 170c29 57 65 106 110 148s96 85 153 127c-3 16 -8 46 -13 92c-4 43 -5 73 -5 89c0 117 16 172 69 257c34 54 64 82 89 82 c21 0 43 -30 69 -92s39 -115 41 -159v-15c0 -109 -21 -162 -67 -241c-13 -20 -63 -90 -98 -118c-13 -9 -25 -19 -37 -29l31 -181c8 1 18 2 28 2c58 0 102 -12 133 -35c59 -43 92 -104 98 -184c1 -7 1 -15 1 -22c0 -123 -87 -209 -181 -248c8 -57 17 -110 25 -162 c5 -31 6 -58 6 -80c0 -30 -5 -53 -14 -70c-35 -64 -88 -99 -158 -103c-5 0 -11 -1 -16 -1c-37 0 -72 10 -108 27c-50 24 -77 59 -80 105v11c0 29 7 55 20 76c18 28 45 42 79 44h6c49 0 93 -42 97 -87v-9c0 -51 -34 -86 -105 -106c17 -24 51 -36 102 -36c62 0 116 43 140 85 c9 16 13 41 13 74c0 20 -1 42 -5 67c-8 53 -18 106 -26 159zM461 939c-95 0 -135 -175 -135 -286c0 -24 2 -48 5 -71c50 39 92 82 127 128c40 53 60 100 60 140v8c-4 53 -22 81 -55 81h-2zM406 119l54 -326c73 25 110 78 110 161c0 7 0 15 -1 23c-7 95 -57 142 -151 142h-12 zM382 117c-72 -2 -128 -47 -128 -120v-7c2 -46 43 -99 75 -115c-3 -2 -7 -5 -10 -10c-70 33 -116 88 -123 172v11c0 68 44 126 88 159c23 17 49 29 78 36l-29 170c-21 -13 -52 -37 -92 -73c-50 -44 -86 -84 -109 -119c-45 -69 -67 -130 -67 -182v-13c5 -68 35 -127 93 -176 s125 -73 203 -73c25 0 50 3 75 9c-19 111 -36 221 -54 331z" />
+      </g>
+      <g id="E080-o1fewgm9">
+         <path transform="scale(1,-1)" d="M229 251zM230 -250c-99 0 -210 94 -210 251c0 152 93 250 209 250s205 -119 205 -250c0 -139 -103 -251 -204 -251zM139 1c0 -79 13 -215 88 -215c68 0 84 112 84 215c0 76 -15 216 -84 216c-68 0 -88 -136 -88 -216z" />
+      </g>
+      <g id="E0A1-o1fewgm9">
+         <path transform="scale(1,-1)" d="M0 165c0 5 6 5 12 5s13 0 13 -5v-40h298v40c0 5 7 5 13 5s12 0 12 -5v-330c0 -5 -6 -5 -12 -5s-13 0 -13 5v40h-298v-40c0 -5 -7 -5 -13 -5s-12 0 -12 5v330zM25 0c0 -29 1 -55 25 -55h248c24 0 25 26 25 55s-1 55 -25 55h-248c-24 0 -25 -26 -25 -55z" />
+      </g>
+      <g id="E0A2-o1fewgm9">
+         <path transform="scale(1,-1)" d="M198 133c102 0 207 -45 207 -133c0 -92 -118 -133 -227 -133c-101 0 -178 46 -178 133c0 88 93 133 198 133zM293 -21c0 14 -3 29 -8 44c-7 20 -18 38 -33 54c-20 21 -43 31 -68 31l-20 -2c-15 -5 -27 -14 -36 -28c-4 -9 -6 -17 -8 -24s-3 -16 -3 -27c0 -15 3 -34 9 -57 s18 -41 34 -55c15 -15 36 -23 62 -23c4 0 10 1 18 2c19 5 32 15 40 30s13 34 13 55z" />
+      </g>
+      <g id="E0A3-o1fewgm9">
+         <path transform="scale(1,-1)" d="M278 64c0 22 -17 39 -43 39c-12 0 -26 -3 -41 -10c-85 -43 -165 -94 -165 -156c5 -25 15 -32 49 -32c67 11 200 95 200 159zM0 -36c0 68 73 174 200 174c66 0 114 -39 114 -97c0 -84 -106 -173 -218 -173c-64 0 -96 32 -96 96z" />
+      </g>
+      <g id="E0A4-o1fewgm9">
+         <path transform="scale(1,-1)" d="M0 -39c0 68 73 172 200 172c66 0 114 -37 114 -95c0 -84 -106 -171 -218 -171c-64 0 -96 30 -96 94z" />
+      </g>
+   </defs>
+   <style type="text/css">#o1fewgm9 g.ending, #o1fewgm9 g.fing, #o1fewgm9 g.reh, #o1fewgm9 g.tempo {font-weight:bold;}#o1fewgm9 g.dir, #o1fewgm9 g.dynam, #o1fewgm9 g.mNum {font-style:italic;}#o1fewgm9 g.label {font-weight:normal;}#o1fewgm9 ellipse, #o1fewgm9 path, #o1fewgm9 polygon, #o1fewgm9 polyline, #o1fewgm9 rect {stroke:currentColor}#o1fewgm9 g.cursor {fill:dodgerblue; color:dodgerblue;}#o1fewgm9 g.cursor.chord {fill:limegreen; color:limegreen;}</style>
+   <svg class="definition-scale" color="black" font-family="Times, serif" viewBox="0 0 12000 9820">
+      <g class="page-margin" transform="translate(500, 500)">
+         <g id="peplhgw" class="mdiv pageMilestone" />
+         <g id="t8xbm8x" class="score pageMilestone" />
+         <g id="f1jxw3el" class="system">
+            <g id="g179kcpn" class="section systemMilestone" />
+            <g id="abcLine06" class="pb" />
+            <g id="nia5v6k" class="measure">
+               <g id="wvvmf2z" class="staff">
+                  <path d="M0 1086 L4517 1086" stroke-width="13" />
+                  <path d="M0 1266 L4517 1266" stroke-width="13" />
+                  <path d="M0 1446 L4517 1446" stroke-width="13" />
+                  <path d="M0 1626 L4517 1626" stroke-width="13" />
+                  <path d="M0 1806 L4517 1806" stroke-width="13" />
+                  <g id="i2m1ygi" class="clef">
+                     <use xlink:href="#E050-o1fewgm9" transform="translate(90, 1626) scale(0.72, 0.72)" />
+                  </g>
+                  <g id="j1jpspho" class="keySig" />
+                  <g id="k1fxjjxr" class="meterSig">
+                     <use xlink:href="#E080-o1fewgm9" transform="translate(721, 1446) scale(0.72, 0.72)" />
+                  </g>
+                  <g id="ixfm952" class="layer">
+                     <g id="mqtii72" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A1-o1fewgm9" transform="translate(1315, 1356) scale(0.72, 0.72)" />
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="k1fznz72" class="harm">
+                  <text x="1440" y="908" text-anchor="middle" font-size="0px">
+                     <tspan id="ltdvjc0" class="text">
+                        <tspan font-size="405px">F</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="v15hhkkk" class="barLine">
+                  <path d="M4405 1086 L4405 1806" stroke-width="27" />
+                  <path d="M4504 1086 L4504 1806" stroke-width="27" />
+               </g>
+            </g>
+            <g id="abcLine08" class="sb" />
+            <g id="bxl33cx" class="measure">
+               <g id="k1vb8mpz" class="staff">
+                  <path d="M4517 1086 L11001 1086" stroke-width="13" />
+                  <path d="M4517 1266 L11001 1266" stroke-width="13" />
+                  <path d="M4517 1446 L11001 1446" stroke-width="13" />
+                  <path d="M4517 1626 L11001 1626" stroke-width="13" />
+                  <path d="M4517 1806 L11001 1806" stroke-width="13" />
+                  <g id="xyn7nos" class="layer">
+                     <g id="z1cd9d6k" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A1-o1fewgm9" transform="translate(4709, 1356) scale(0.72, 0.72)" />
+                        </g>
+                     </g>
+                     <g id="a5pmbyl" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A1-o1fewgm9" transform="translate(7799, 1356) scale(0.72, 0.72)" />
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="jozmb6j" class="barLine">
+                  <path d="M10889 1086 L10889 1806" stroke-width="27" />
+                  <path d="M10988 1086 L10988 1806" stroke-width="27" />
+               </g>
+            </g>
+            <g id="abcLine09" class="sb" />
+         </g>
+         <g id="i101mp4g" class="system">
+            <g id="r1d85c12" class="measure">
+               <g id="a10u9atv" class="staff">
+                  <path d="M0 3246 L11000 3246" stroke-width="13" />
+                  <path d="M0 3426 L11000 3426" stroke-width="13" />
+                  <path d="M0 3606 L11000 3606" stroke-width="13" />
+                  <path d="M0 3786 L11000 3786" stroke-width="13" />
+                  <path d="M0 3966 L11000 3966" stroke-width="13" />
+                  <g id="l1fiysev" class="clef">
+                     <use xlink:href="#E050-o1fewgm9" transform="translate(90, 3786) scale(0.72, 0.72)" />
+                  </g>
+                  <g id="m15c9vo2" class="keySig" />
+                  <g id="lkvx4so" class="layer">
+                     <g id="n5oogov" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A1-o1fewgm9" transform="translate(824, 3516) scale(0.72, 0.72)" />
+                        </g>
+                     </g>
+                     <g id="omwltq" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A1-o1fewgm9" transform="translate(3340, 3426) scale(0.72, 0.72)" />
+                        </g>
+                     </g>
+                     <g id="pa672ol" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A1-o1fewgm9" transform="translate(5856, 3336) scale(0.72, 0.72)" />
+                        </g>
+                     </g>
+                     <g id="q1r65zra" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A1-o1fewgm9" transform="translate(8372, 3516) scale(0.72, 0.72)" />
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="zwuhxbj" class="barLine">
+                  <path d="M10888 3246 L10888 3966" stroke-width="27" />
+                  <path d="M10987 3246 L10987 3966" stroke-width="27" />
+               </g>
+            </g>
+            <g id="abcLine10" class="sb" />
+         </g>
+         <g id="l1o4k12e" class="system">
+            <g id="p6hntp7" class="measure">
+               <g id="y1419kio" class="staff">
+                  <path d="M0 5406 L11000 5406" stroke-width="13" />
+                  <path d="M0 5586 L11000 5586" stroke-width="13" />
+                  <path d="M0 5766 L11000 5766" stroke-width="13" />
+                  <path d="M0 5946 L11000 5946" stroke-width="13" />
+                  <path d="M0 6126 L11000 6126" stroke-width="13" />
+                  <g id="n5dkmex" class="clef">
+                     <use xlink:href="#E050-o1fewgm9" transform="translate(90, 5946) scale(0.72, 0.72)" />
+                  </g>
+                  <g id="o1w7k8fv" class="keySig" />
+                  <g id="b1eolqom" class="layer">
+                     <g id="d1wzvnqf" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A2-o1fewgm9" transform="translate(799, 5676) scale(0.72, 0.72)" />
+                        </g>
+                     </g>
+                     <g id="e1rjg6hf" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A3-o1fewgm9" transform="translate(1886, 5766) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="x2webu5" class="stem">
+                           <path d="M1895 5791 L1895 6366" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="f9jn76s" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A3-o1fewgm9" transform="translate(2604, 5676) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="yew7q8n" class="stem">
+                           <path d="M2613 5701 L2613 6306" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="g14n1gx8" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A2-o1fewgm9" transform="translate(3322, 5586) scale(0.72, 0.72)" />
+                        </g>
+                     </g>
+                     <g id="h1oxmw8i" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A3-o1fewgm9" transform="translate(4408, 5676) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="a16enkh7" class="stem">
+                           <path d="M4417 5701 L4417 6306" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="i1h4gk0q" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A3-o1fewgm9" transform="translate(5126, 5586) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="b99ocua" class="stem">
+                           <path d="M5135 5611 L5135 6216" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="j9zujmf" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A2-o1fewgm9" transform="translate(5844, 5496) scale(0.72, 0.72)" />
+                        </g>
+                     </g>
+                     <g id="k5e8mx0" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A3-o1fewgm9" transform="translate(6931, 5586) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="diubr4c" class="stem">
+                           <path d="M6940 5611 L6940 6216" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="lexmizr" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A3-o1fewgm9" transform="translate(7648, 5496) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="ebe8ypg" class="stem">
+                           <path d="M7657 5521 L7657 6126" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="moi4arh" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A3-o1fewgm9" transform="translate(8366, 5496) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="f1019zx0" class="stem">
+                           <path d="M8375 5521 L8375 6126" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="n1ovfumo" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A3-o1fewgm9" transform="translate(9084, 5586) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="g133su5o" class="stem">
+                           <path d="M9093 5611 L9093 6216" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="oac5uz" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A2-o1fewgm9" transform="translate(9802, 5676) scale(0.72, 0.72)" />
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="xmaqg99" class="barLine">
+                  <path d="M10888 5406 L10888 6126" stroke-width="27" />
+                  <path d="M10987 5406 L10987 6126" stroke-width="27" />
+               </g>
+            </g>
+            <g id="abcLine11" class="sb" />
+         </g>
+         <g id="oixl26y" class="system">
+            <g id="thncxxp" class="measure">
+               <g id="c1wawnrv" class="staff">
+                  <path d="M0 7566 L11000 7566" stroke-width="13" />
+                  <path d="M0 7746 L11000 7746" stroke-width="13" />
+                  <path d="M0 7926 L11000 7926" stroke-width="13" />
+                  <path d="M0 8106 L11000 8106" stroke-width="13" />
+                  <path d="M0 8286 L11000 8286" stroke-width="13" />
+                  <g id="p1jtkd34" class="clef">
+                     <use xlink:href="#E050-o1fewgm9" transform="translate(90, 8106) scale(0.72, 0.72)" />
+                  </g>
+                  <g id="q18thc2m" class="keySig" />
+                  <g id="ztckwxc" class="layer">
+                     <g id="bzx945b" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-o1fewgm9" transform="translate(745, 7836) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="ioirvk" class="stem">
+                           <path d="M754 7864 L754 8466" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="c19l9baf" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-o1fewgm9" transform="translate(1049, 7926) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="j18t2y83" class="stem">
+                           <path d="M1058 7954 L1058 8526" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="d5crafy" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-o1fewgm9" transform="translate(1353, 8016) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="k1dtmst5" class="stem">
+                           <path d="M1570 7988 L1570 7386" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="e1bnpshi" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-o1fewgm9" transform="translate(1657, 7836) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="l1wiiyf7" class="stem">
+                           <path d="M1666 7864 L1666 8466" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="f17vdoks" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-o1fewgm9" transform="translate(1961, 7926) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="m1mznwhq" class="stem">
+                           <path d="M1970 7954 L1970 8526" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="l19f9jgx" class="beam">
+                        <polygon points="2266,8556 2879,8556 2879,8466 2266,8466" />
+                        <g id="gncvs8n" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-o1fewgm9" transform="translate(2266, 7836) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="nojr65x" class="stem">
+                              <path d="M2275 7864 L2275 8538" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="h2xi2tj" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-o1fewgm9" transform="translate(2464, 7746) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="o1xvufqd" class="stem">
+                              <path d="M2473 7774 L2473 8538" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="i1pswaj7" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-o1fewgm9" transform="translate(2662, 8016) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="p751wbr" class="stem">
+                              <path d="M2671 8044 L2671 8538" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="jmi358h" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-o1fewgm9" transform="translate(2861, 7926) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="q16cg2s6" class="stem">
+                              <path d="M2870 7954 L2870 8538" stroke-width="18" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="k12896g8" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-o1fewgm9" transform="translate(3059, 7836) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="rtm3vh" class="stem">
+                           <path d="M3068 7864 L3068 8466" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="m136gu8k" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-o1fewgm9" transform="translate(3363, 7746) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="s1smxdyo" class="stem">
+                           <path d="M3372 7774 L3372 8376" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="n1wq6u8w" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-o1fewgm9" transform="translate(3667, 7836) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="tmdhrf9" class="stem">
+                           <path d="M3676 7864 L3676 8466" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="o16buyn2" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-o1fewgm9" transform="translate(3972, 7926) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="uwdqf20" class="stem">
+                           <path d="M3981 7954 L3981 8526" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="p1xoq4a2" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-o1fewgm9" transform="translate(4276, 7746) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="v7uvtqz" class="stem">
+                           <path d="M4285 7774 L4285 8376" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="q1seraly" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-o1fewgm9" transform="translate(4580, 7836) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="wr7vrjr" class="stem">
+                           <path d="M4589 7864 L4589 8466" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="w1o97y19" class="beam">
+                        <polygon points="4884,8511 5497,8511 5497,8421 4884,8421" />
+                        <g id="r136qa96" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-o1fewgm9" transform="translate(4884, 7746) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="xspnxty" class="stem">
+                              <path d="M4893 7774 L4893 8493" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="s1mc6pmn" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-o1fewgm9" transform="translate(5083, 7656) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="y18oa0rs" class="stem">
+                              <path d="M5092 7684 L5092 8493" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="tjtpkgb" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-o1fewgm9" transform="translate(5281, 7926) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="z1esxwgl" class="stem">
+                              <path d="M5290 7954 L5290 8493" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="uu5sex8" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-o1fewgm9" transform="translate(5479, 7836) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="a1ly5s7d" class="stem">
+                              <path d="M5488 7864 L5488 8493" stroke-width="18" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="vvzfj5y" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-o1fewgm9" transform="translate(5678, 7746) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="b1j9gk3g" class="stem">
+                           <path d="M5687 7774 L5687 8376" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="xakg4hs" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-o1fewgm9" transform="translate(5982, 7656) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="cxnh3cb" class="stem">
+                           <path d="M5991 7684 L5991 8286" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="y1hy3qgd" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-o1fewgm9" transform="translate(6286, 7746) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="d1jrmxz3" class="stem">
+                           <path d="M6295 7774 L6295 8376" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="zvvad5d" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-o1fewgm9" transform="translate(6590, 7836) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="e1ebpso4" class="stem">
+                           <path d="M6599 7864 L6599 8466" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="a8nxmnr" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-o1fewgm9" transform="translate(6894, 7656) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="f1wkz7ar" class="stem">
+                           <path d="M6903 7684 L6903 8286" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="ky3698q" class="beam">
+                        <polygon points="7199,8511 8605,8511 8605,8421 7199,8421" />
+                        <g id="b1e01me8" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-o1fewgm9" transform="translate(7199, 7746) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="gx5cgpl" class="stem">
+                              <path d="M7208 7774 L7208 8493" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="c1byhqwa" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-o1fewgm9" transform="translate(7397, 7836) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="h18v8w6s" class="stem">
+                              <path d="M7406 7864 L7406 8493" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="d1ev0q2j" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-o1fewgm9" transform="translate(7595, 7926) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="ilrmzcl" class="stem">
+                              <path d="M7604 7954 L7604 8493" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="e19zrctp" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-o1fewgm9" transform="translate(7794, 7746) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="jqdwo9l" class="stem">
+                              <path d="M7803 7774 L7803 8493" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="f1wm8lsu" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-o1fewgm9" transform="translate(7992, 7656) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="kvkcf7l" class="stem">
+                              <path d="M8001 7684 L8001 8493" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="glhpx61" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-o1fewgm9" transform="translate(8191, 7746) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="l1csugbh" class="stem">
+                              <path d="M8200 7774 L8200 8493" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="hdfejye" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-o1fewgm9" transform="translate(8389, 7836) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="m11tbblm" class="stem">
+                              <path d="M8398 7864 L8398 8493" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="i1k8hb61" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-o1fewgm9" transform="translate(8587, 7656) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="nslk3rx" class="stem">
+                              <path d="M8596 7684 L8596 8493" stroke-width="18" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="j1ti85i8" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-o1fewgm9" transform="translate(8786, 7656) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="og5uepk" class="stem">
+                           <path d="M8795 7684 L8795 8286" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="ozhrl4g" class="beam">
+                        <polygon points="9090,8466 9306,8511 9306,8421 9090,8376" />
+                        <g id="lqdm778" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-o1fewgm9" transform="translate(9090, 7746) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="pthje9o" class="stem">
+                              <path d="M9099 7774 L9099 8448" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="m4uphof" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-o1fewgm9" transform="translate(9288, 7836) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="qqi3o3d" class="stem">
+                              <path d="M9297 7864 L9297 8493" stroke-width="18" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="nsnfs06" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-o1fewgm9" transform="translate(9487, 7746) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="rsv8epf" class="stem">
+                           <path d="M9496 7774 L9496 8376" stroke-width="18" />
+                        </g>
+                     </g>
+                     <g id="s128ymgn" class="beam">
+                        <polygon points="9791,8466 10007,8511 10007,8421 9791,8376" />
+                        <g id="p1vn0iix" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-o1fewgm9" transform="translate(9791, 7836) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="s17vu3e0" class="stem">
+                              <path d="M9800 7864 L9800 8448" stroke-width="18" />
+                           </g>
+                        </g>
+                        <g id="q13nlvpj" class="note">
+                           <g class="notehead">
+                              <use xlink:href="#E0A4-o1fewgm9" transform="translate(9989, 7926) scale(0.72, 0.72)" />
+                           </g>
+                           <g id="t18qe6aw" class="stem">
+                              <path d="M9998 7954 L9998 8493" stroke-width="18" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="rvku7w5" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A2-o1fewgm9" transform="translate(10188, 7836) scale(0.72, 0.72)" />
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="bvpooij" class="barLine">
+                  <path d="M10888 7566 L10888 8286" stroke-width="27" />
+                  <path d="M10987 7566 L10987 8286" stroke-width="27" />
+               </g>
+            </g>
+            <g id="abcLine12" class="sb" />
+            <g id="mu21qer" class="systemMilestoneEnd g179kcpn" />
+         </g>
+         <g id="n1x700qj" class="pageMilestoneEnd t8xbm8x" />
+         <g id="o6rsvjs" class="pageMilestoneEnd peplhgw" />
+         <g id="d1ffs0mc" class="pgHead">
+            <text font-size="0px">
+               <tspan id="eskgfsm" class="rend" x="5500" y="278" text-anchor="middle">
+                  <tspan id="f1crrk90" class="text">
+                     <tspan font-size="405px">Stimulus 131.abc</tspan>
+                  </tspan>
+               </tspan>
+            </text>
+         </g>
+      </g>
+   </svg>
+</svg>
