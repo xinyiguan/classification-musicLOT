@@ -20,7 +20,7 @@ export const transition = {
             <p>
             </p>
             <p style="font-size: 1.1rem; color: #475569; margin: 0; line-height: 1.6;">
-             Next, we would like to ask you a few questions about your <b>musical background and habits</b>.
+             Next, we would like to ask you a few questions about your <b>musical background and demographic information</b>.
             </p>
             <p>
             </p>

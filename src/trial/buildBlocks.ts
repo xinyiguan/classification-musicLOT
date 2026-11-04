@@ -104,7 +104,6 @@ export function buildBlockTimeline(
             // Tag metadata dynamically to raw data output tracking across layers
             trialObj.data = Object.assign({}, trialObj.data, {
                 block_number: blockNumber, // Sequential position in presentation order
-                original_block_group: blockNumber,
             });
 
             timeline.push(trialObj);

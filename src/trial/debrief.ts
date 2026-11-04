@@ -31,6 +31,8 @@ export const debrief = {
       task: "debrief_screen"
     },
     on_load: () => {
+        document.body.classList.remove("experiment-progress-visible");
+        document.body.classList.add("experiment-progress-hidden");
         document.body.classList.add("state-transition");
 
         // Select ALL nav buttons instead of just one

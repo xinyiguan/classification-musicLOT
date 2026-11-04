@@ -18,6 +18,8 @@ import { buildGoldMSITimeline } from "./trial/goldMSI";
 import { buildDemographicsTimeline } from "./trial/demographics"; 
 import { debrief } from "./trial/debrief";
 
+const localDevelopment: boolean = false; // Set to `false` when deploying to production
+
 export type Phase = "practice" | "main"
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -101,58 +103,70 @@ export function initExperiment() {
   document.body.classList.add("experiment-progress-hidden");
 
   // Use mainStimuli length for the true experiment trial count
-  const actualTrialCount = mainStimuli.length;
-  let completedActualTrials = 0;
-  let mainExperimentStarted = false;
+    const actualTrialCount = mainStimuli.length;
+    let completedActualTrials = 0;
+    let progressValueElement: HTMLSpanElement | null = null;
+
+    const updateProgressValue = () => {
+        if (progressValueElement) {
+            progressValueElement.textContent = `${completedActualTrials}/${actualTrialCount} trials`;
+        }
+    };
+
+    const ensureProgressValueElement = () => {
+        const progressContainer = document.getElementById("jspsych-progressbar-container");
+
+        // Safeguard: Exit if jsPsych hasn't created the progress bar yet
+        if (!progressContainer) {
+            return;
+        }
+
+        progressValueElement = progressContainer.querySelector<HTMLSpanElement>(
+            ".experiment-progress-value"
+        );
+
+        if (!progressValueElement) {
+            progressValueElement = document.createElement("span");
+            progressValueElement.className = "experiment-progress-value";
+            progressContainer.appendChild(progressValueElement);
+        }
+
+        updateProgressValue();
+    };
+
 
   const jsPsych = initJsPsych({
     show_progress_bar: true,
     auto_update_progress_bar: false,
-    
-    message_progress_bar: () => {
-      return `<span class="experiment-progress-label">Progress:  <strong>${completedActualTrials}/${actualTrialCount}</strong> trials</span>`;
-    },
+    message_progress_bar: () => `<span class="experiment-progress-label">Progress</span>`,
     
     auto_preload: false,
     use_webaudio: false,
     override_safe_mode: true,
 
     on_trial_start: (trial: any) => {
-      if (trial?.data?.task === "gold_msi" || trial?.data?.task === "gold_msi_mixed" || trial?.data?.task === "gold_msi_sliders") {
-        document.body.classList.remove("experiment-progress-visible");
-        document.body.classList.add("experiment-progress-hidden");
-        return;
-      }
-
-      // Explicitly hide during practice or before the main experiment starts
-      if (!mainExperimentStarted || trial?.data?.phase === "practice") {
-        document.body.classList.remove("experiment-progress-visible");
-        document.body.classList.add("experiment-progress-hidden");
-        return;
+      // Exit immediately if this is a practice phase trial
+      if (trial?.data?.phase === "practice" || trial?.data?.task !== "classification") {
+          return;
       }
 
       document.body.classList.remove("experiment-progress-hidden");
       document.body.classList.add("experiment-progress-visible");
-    },
+      ensureProgressValueElement();
+      },
 
     on_trial_finish: (data: any) => {
-      if (data?.task === "start_experiment_screen") {
-        mainExperimentStarted = true;
-        completedActualTrials = 0;
-
-        if (jsPsych.progressBar) {
-          jsPsych.progressBar.progress = 0;
-        }
-        return;
+      if (data?.phase === "practice" || data?.task !== "classification") {
+          return;
       }
 
-      if (mainExperimentStarted && data?.phase !== "practice" && data?.task !== "gold_msi" && data?.task !=="demographics") {
-        completedActualTrials += 1;
+      completedActualTrials += 1;
 
-        if (jsPsych.progressBar) {
+      if (jsPsych.progressBar) {
           jsPsych.progressBar.progress = Math.min(completedActualTrials / actualTrialCount, 1);
-        }
       }
+
+      updateProgressValue();
     },
 
     on_finish: async (data: any) => {
@@ -169,8 +183,9 @@ export function initExperiment() {
       };
 
       // --- FOR LOCAL DEV DOWNLOADS ---
-      downloadJson(payload, `participant_${participantId}.json`);
-
+      if (localDevelopment) {
+          downloadJson(payload, `participant_${participantId}.json`);
+      }
       const res = await fetch("./api/results", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -201,7 +216,7 @@ export function initExperiment() {
       const checkData = data.filter({ task: "comprehension_check" }).values();
       const playCountSelection = checkData[0]?.response;
       const classificationSelection = checkData[1]?.response;
-      const passed = playCountSelection === "As many times as I need" && classificationSelection === "Pick the option that belongs to the training group";
+      const passed = playCountSelection === "As many times as I need" && classificationSelection === "Pick the option that follows the same pattern as the training group";
       if (!passed) { alert("One or more answers were incorrect. Please review instructions."); }
       return !passed;
     }

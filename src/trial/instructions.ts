@@ -32,7 +32,7 @@ function ensureStylesInjected() {
 }
 
 // 2. SHARED INLINE DESIGN TOKENS
-const CARD_STYLE = "width: 680px; min-width: 680px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); font-family: sans-serif; line-height: 1.6; margin: 40px auto; padding: 35px; box-sizing: border-box; text-align: left;";
+const CARD_STYLE = "width: 760px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); font-family: sans-serif; line-height: 1.6; margin: 40px auto; padding: 35px; box-sizing: border-box; text-align: left;";
 const BADGE_HEADER_STYLE = "background-color: #ebf5fa; color: #059669; display: inline-block; padding: 6px 14px; border-radius: 20px; font-size: 0.85em; font-weight: bold; border: 1px solid #cbd5e1; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;";
 const SECTION_TITLE_STYLE = "font-weight: 600; color: #1e293b; font-size: 1.25em; margin: 25px 0 12px 0; border-bottom: 2px solid #f1f5f9; padding-bottom: 6px;";
 const BOX_STYLE = "width: 100%; box-sizing: border-box; background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 16px;";
@@ -80,10 +80,13 @@ export function getInstructions() {
               </div>
               <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 0.95em; color: #334155;">
                 <li class="reveal-item" style="display: none;" data-tag="li">
-                  Listen to all melody samples in the Training Group column on the left.
+                  You will see three melodies on the left. These are called the <strong>training melodies</strong>.
                 </li>
                 <li class="reveal-item" style="display: none;" data-tag="li">
-                  You can play them in any order and as many times as necessary.
+                  You should listen to all three of them first. You can listen to them in any order and as many times as you like.
+                </li>
+                <li class="reveal-item" style="display: none;" data-tag="li">
+                  Try to notice the <strong>underlying rule or pattern</strong> that connects them.
                 </li>
               </ul>
             </div>
@@ -95,13 +98,28 @@ export function getInstructions() {
               </div>
               <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 0.95em; color: #334155;">
                 <li class="reveal-item" style="display: none;" data-tag="li">
-                  Listen to both options in the right column (you can play them in any order).
+                  Listen to two <strong>new melodies</strong> in the right column (you can play them in any order and as many times as necessary to make a decision).
                 </li>
                 <li class="reveal-item" style="display: none;" data-tag="li">
-                  <strong>Your goal:</strong> Choose the option you think best matches the pattern of the Training Group samples.
+                  <strong>Your goal:</strong> Choose the melody you think best follows the same pattern as the training melodies.
                 </li>
                 <li class="reveal-item" style="display: none;" data-tag="li">
                   After making your choice, rate how confident you are in your answer.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Audio Controls Tip -->
+            <div class="reveal-item" style="display: none; border-top: 1px solid #e2e8f0; padding-top: 14px;" data-tag="div">
+              <div style="font-size: 0.95em; font-weight: bold; color: #0284c7; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 6px;">
+                Audio Playback Controls
+              </div>
+              <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 0.95em; color: #334155;">
+                <li class="reveal-item" style="display: none;" data-tag="li">
+                  On the <strong>first playback</strong> of any melody, you must listen all the way through without stopping or seeking.
+                </li>
+                <li class="reveal-item" style="display: none;" data-tag="li">
+                  After a melody has been completely played once, its <strong>audio slider will unlock</strong>, allowing you to pause, replay, or jump to any point in the track.
                 </li>
               </ul>
             </div>
@@ -114,6 +132,7 @@ export function getInstructions() {
       </div>
       `,
 
+      
       // CARD 3: Part 2 & Finish (3/3)
       `
       <div style="${CARD_STYLE}">

@@ -39,10 +39,10 @@ const COLORS = {
   errorText: "#b91c1c"
 };
 
-const CARD_STYLE = "width: 100%; max-width: 900px; height: 580px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); font-family: sans-serif; line-height: 1.6; margin: 30px auto 16px auto; padding: 32px; box-sizing: border-box; text-align: left;";
+const CARD_STYLE = "width: 100%; max-width: 900px; height: 610px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); font-family: sans-serif; line-height: 1.6; margin: 30px auto 16px auto; padding: 32px; box-sizing: border-box; text-align: left;";
 const BADGE_HEADER_STYLE = "background-color: #ebf5fa; color: #059669; display: inline-block; padding: 6px 14px; border-radius: 20px; font-size: 0.85em; font-weight: bold; border: 1px solid #cbd5e1; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px;";
-const PLAY_BTN_STYLE = "background-color: #f1f5f9; border: 1px solid #cbd5e1; color: #1e293b; padding: 10px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.95rem; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;";
-const OPTION_CONTAINER_STYLE = "display: flex; align-items: center; gap: 12px; margin-bottom: 12px; padding: 8px; border-radius: 8px; border: 1px solid #e2e8f0; background: #ffffff; transition: all 0.25s ease;";
+const PLAY_BTN_STYLE = "background-color: #f1f5f9; border: 1px solid #cbd5e1; color: #1e293b; padding: 8px 14px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.9rem; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; transition: background-color 0.2s;";
+const OPTION_CONTAINER_STYLE = "display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; padding: 10px; border-radius: 8px; border: 1px solid #e2e8f0; background: #ffffff; transition: all 0.25s ease;";
 const PRACTICE_BADGE_STYLE = `background-color: #7C3AED; color: #FFFFFF; display: inline-block; padding: 6px 14px; border-radius: 6px; font-size: 0.85em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; box-shadow: 0 2px 4px rgba(124, 58, 237, 0.2);`;
 
 const FEEDBACK_DURATION_MS = 1500;
@@ -81,6 +81,11 @@ function injectStyles() {
         background-size: 1rem 1rem !important;
         border-radius: 20px !important;
         transition: width 0.4s ease !important;
+    }
+
+    .audio-play-btn.listened {
+        background-color: #e2e8f0 !important;
+        border-color: #94a3b8 !important;
     }
 
     .custom-submit-btn, #jspsych-html-button-response-btngroup button.jspsych-btn {
@@ -154,27 +159,17 @@ export function createClassificationTrial(params: classficiationTrialParams) {
   const audioPlaybackOrder: string[] = [];
   const audioPlaybackCounts: Record<string, number> = {};
 
-  const INLINE_PLAY_SCRIPT = (id: string) => `
-    (function() {
-      const allAudios = Array.from(document.querySelectorAll('audio'));
-      const isAnyPlaying = allAudios.some(a => !a.paused && !a.ended && a.readyState > 2);
-      if (isAnyPlaying) return;
-
-      const target = document.getElementById('${id}');
-      if (target) {
-        target.play();
-      }
-    })();
-  `;
-
   const trainingItemsHtml = params.trial.train
     .map(
       (src, idx) => `
-      <div style="margin-bottom: 10px;">
-        <audio class="trial-audio" id="train-audio-${idx}" src="${src}" preload="auto"></audio>
-        <button type="button" class="audio-play-btn" style="${PLAY_BTN_STYLE}" onclick="${INLINE_PLAY_SCRIPT(`train-audio-${idx}`)}">
+      <div style="margin-bottom: 12px;">
+        <audio class="trial-audio train-audio" id="train-audio-${idx}" data-train-idx="${idx}" src="${src}" preload="auto"></audio>
+        <button type="button" class="audio-play-btn train-play-btn" id="train-btn-${idx}" style="${PLAY_BTN_STYLE}">
           <span>▶ Sample ${idx + 1}</span>
         </button>
+        <div style="margin-top: 4px; display: flex; align-items: center; gap: 8px;">
+          <input type="range" id="train-seek-${idx}" min="0" max="100" value="0" step="0.1" disabled style="width: 100%; cursor: not-allowed; opacity: 0.5;" />
+        </div>
       </div>`
     )
     .join("");
@@ -188,13 +183,17 @@ export function createClassificationTrial(params: classficiationTrialParams) {
           id="option-${idx}" 
           name="test-choice" 
           value="${idx}" 
-          style="width: 18px; height: 18px; cursor: pointer; accent-color: #2563eb;"
+          disabled
+          style="width: 18px; height: 18px; cursor: not-allowed; accent-color: #2563eb; margin-top: 6px;"
         />
         <div style="flex-grow: 1;">
           <audio class="trial-audio test-audio" id="test-audio-${idx}" data-test-idx="${idx}" src="${src}" preload="auto"></audio>
-          <button type="button" class="audio-play-btn" style="${PLAY_BTN_STYLE}" onclick="${INLINE_PLAY_SCRIPT(`test-audio-${idx}`)}">
+          <button type="button" class="audio-play-btn test-play-btn" id="test-btn-${idx}" disabled style="${PLAY_BTN_STYLE} opacity: 0.4; cursor: not-allowed; pointer-events: none;">
             <span>▶ Option ${String.fromCharCode(65 + idx)}</span>
           </button>
+          <div style="margin-top: 4px; display: flex; align-items: center; gap: 8px;">
+            <input type="range" id="test-seek-${idx}" min="0" max="100" value="0" step="0.1" disabled style="width: 100%; cursor: not-allowed; opacity: 0.5;" />
+          </div>
         </div>
       </label>`
     )
@@ -214,39 +213,40 @@ export function createClassificationTrial(params: classficiationTrialParams) {
       </div>
 
       <p style="font-size: 1.05rem; color: #2d3643; margin: 0 0 20px 0; font-weight: 500;">
-        Play and listen to the samples in the training group column on the left. 
-        Then listen to all options on the right, select your choice, rate your confidence, and click Submit.
+        Listen to all <strong>Training Melodies</strong> on the left. 
+        Then listen to <strong>both options</strong> on the right, select your answer & rate your confidence, then Submit.
+        (Audio slider unlock <strong>after</strong> 1 full listen).
       </p>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; background: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0;">
+      <div style="display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 24px; background: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0;">
         <div style="border-right: 2px solid #cbd5e1; padding-right: 20px;">
           <h3 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin-top: 0; margin-bottom: 14px;">
-            Training Group (${params.trial.train.length} Samples)
+            Training Melodies (${params.trial.train.length} Samples)
           </h3>
           ${trainingItemsHtml}
         </div>
         <div>
-          <h3 style="font-size: 0.9rem; letter-spacing: 0.05em; color: #64748b; margin-top: 0; margin-bottom: 14px;">
-            Which one belongs to the group?
+          <h3 style="font-size: 0.95rem; text-align:center; color: #64748b; margin-top: 0; margin-bottom: 18px;">
+            Which one follows the same pattern as the training melodies?
           </h3>
           ${testItemsHtml}
         </div>
       </div>
 
-      <div id="confidence-box" style="margin: 24px auto 0 auto; padding: 20px 10px 5px 10px; border-top: 2px dashed ${COLORS.cardBorder}; text-align: center; max-width: 480px;">
-          <div style="font-weight: bold; color: ${COLORS.textPrimary}; margin-bottom: 14px; font-size: 1em;">How confident are you in your choice?</div>
+      <div id="confidence-box" style="margin: 10px auto 0 auto; padding: 15px 10px 5px 10px; text-align: center; max-width: 480px;">
+          <div style="font-weight: bold; color: ${COLORS.textPrimary}; margin-bottom: 10px; font-size: 1em;">How confident are you in your choice?</div>
           <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 15px;">
               ${[1, 2, 3, 4, 5].map((n) => `
                   <label id="conf-label-${n}" class="confidence-label-node">
                       <input class="confidence-input" type="radio" name="confidence-rating" value="${n}" />
                       <span style="font-weight: bold; font-size: 1.1em; color: ${COLORS.textTertiary};">${n}</span>
-                      ${n === 1 ? `<span style="font-size: 0.8em; color: ${COLORS.textMutedLight}; position: absolute; bottom: -24px; white-space: nowrap;">low</span>` : ``}
-                      ${n === 5 ? `<span style="font-size: 0.8em; color: ${COLORS.textMutedLight}; position: absolute; bottom: -24px; white-space: nowrap;">high</span>` : ``}
+                      ${n === 1 ? `<span style="font-size: 0.8em; color: ${COLORS.textMutedLight}; position: absolute; bottom: -22px; white-space: nowrap;">low</span>` : ``}
+                      ${n === 5 ? `<span style="font-size: 0.8em; color: ${COLORS.textMutedLight}; position: absolute; bottom: -22px; white-space: nowrap;">high</span>` : ``}
                   </label>
               `).join("")}
           </div>
       </div>
 
-      <div id="feedback-message" style="margin-top: 18px; font-weight: bold; font-size: 1.15em; text-align: center; min-height: 1.4em;"></div>
+      <div id="feedback-message" style="margin-top: 14px; font-weight: bold; font-size: 1.15em; text-align: center; min-height: 1.4em;"></div>
     </div>
   `;
 
@@ -295,21 +295,42 @@ export function buildTrial(jsPsych: any, phase: Phase, trial: TrialStimulus, pra
           experimentProgressVisible = true;
         }
 
-        const playButtons = document.querySelectorAll<HTMLButtonElement>(".audio-play-btn");
         const audioElements = document.querySelectorAll<HTMLAudioElement>(".trial-audio");
-        const testAudioElements = document.querySelectorAll<HTMLAudioElement>(".test-audio");
         const submitBtn = document.querySelector<HTMLButtonElement>(
           '#jspsych-html-button-response-btngroup button[data-choice="0"]'
         );
         const radios = document.querySelectorAll<HTMLInputElement>('input[name="test-choice"]');
         const confidenceInputs = document.querySelectorAll<HTMLInputElement>('input[name="confidence-rating"]');
 
+        const listenedTrainOptions = new Set<number>();
         const listenedTestOptions = new Set<number>();
         let isSubmitted = false;
 
         if (submitBtn) {
           submitBtn.disabled = true;
         }
+
+        const updateTestAccess = () => {
+          if (isSubmitted) return;
+          const allTrainHeard = listenedTrainOptions.size === trial.train.length;
+
+          radios.forEach((radio) => {
+            radio.disabled = !allTrainHeard;
+            const container = radio.closest(".option-container") as HTMLElement;
+            if (container) {
+              container.style.cursor = allTrainHeard ? "pointer" : "not-allowed";
+              container.style.opacity = allTrainHeard ? "1" : "0.7";
+            }
+          });
+
+          const testButtons = document.querySelectorAll<HTMLButtonElement>(".test-play-btn");
+          testButtons.forEach((btn) => {
+            btn.disabled = !allTrainHeard;
+            btn.style.opacity = allTrainHeard ? "1" : "0.4";
+            btn.style.cursor = allTrainHeard ? "pointer" : "not-allowed";
+            btn.style.pointerEvents = allTrainHeard ? "auto" : "none";
+          });
+        };
 
         const checkCanSubmit = () => {
           if (isSubmitted) return;
@@ -347,48 +368,87 @@ export function buildTrial(jsPsych: any, phase: Phase, trial: TrialStimulus, pra
           });
         });
 
-        const updateButtonStates = (disabled: boolean) => {
-          if (isSubmitted) return;
-          playButtons.forEach((btn) => {
-            btn.disabled = disabled;
-            btn.style.opacity = disabled ? "0.4" : "1";
-            btn.style.cursor = disabled ? "not-allowed" : "pointer";
-            btn.style.pointerEvents = disabled ? "none" : "auto";
-          });
-        };
+        // Initialize state on load
+        updateTestAccess();
 
-        playButtons.forEach((btn) => {
-          btn.addEventListener("mouseover", () => {
-            if (!btn.disabled && !isSubmitted) btn.style.backgroundColor = "#cbd5e1";
-          });
-          btn.addEventListener("mouseout", () => {
-            if (!btn.disabled && !isSubmitted) btn.style.backgroundColor = "#f1f5f9";
-          });
-        });
+        // Setup individual audio controls
+        audioElements.forEach((audio) => {
+          const audioId = audio.id;
+          const isTest = audio.classList.contains("test-audio");
+          const idxStr = audio.getAttribute(isTest ? "data-test-idx" : "data-train-idx");
+          const btn = document.getElementById(isTest ? `test-btn-${idxStr}` : `train-btn-${idxStr}`) as HTMLButtonElement;
+          const seek = document.getElementById(isTest ? `test-seek-${idxStr}` : `train-seek-${idxStr}`) as HTMLInputElement;
 
-        testAudioElements.forEach((audio) => {
-          const markListened = () => {
-            const idxStr = audio.getAttribute("data-test-idx");
-            if (idxStr !== null) {
-              listenedTestOptions.add(parseInt(idxStr, 10));
-              checkCanSubmit();
+          const prefix = isTest ? `Option ${String.fromCharCode(65 + Number(idxStr))}` : `Sample ${Number(idxStr) + 1}`;
+
+          const updateBtnDisplay = () => {
+            if (audio.paused || audio.ended) {
+              btn.innerHTML = `<span>▶ ${prefix}</span>`;
+            } else {
+              btn.innerHTML = `<span>⏹ Stop ${prefix}</span>`;
             }
           };
 
-          audio.addEventListener("ended", markListened);
-        });
+          btn.addEventListener("click", () => {
+            if (isSubmitted) return;
+            
+            if (audio.paused) {
+              // Pause any other playing audio first
+              audioElements.forEach((other) => {
+                if (other !== audio) other.pause();
+              });
+              audio.play().catch(() => {});
+            } else {
+              // Only allow stopping/pausing if the melody has been listened to completely at least once
+              if (btn.classList.contains("listened")) {
+                audio.pause();
+              }
+            }
+          });
 
-        const state = trialComponent.getState();
-        audioElements.forEach((audio) => {
+          audio.addEventListener("timeupdate", () => {
+            if (!isNaN(audio.duration) && audio.duration > 0) {
+              const percent = (audio.currentTime / audio.duration) * 100;
+              seek.value = percent.toString();
+            }
+          });
+
+          seek.addEventListener("input", () => {
+            if (btn.classList.contains("listened") && !isNaN(audio.duration) && audio.duration > 0) {
+              const targetTime = (parseFloat(seek.value) / 100) * audio.duration;
+              audio.currentTime = targetTime;
+            }
+          });
+
           audio.addEventListener("play", () => {
-            updateButtonStates(true);
-            const audioId = audio.id;
+            updateBtnDisplay();
+            const state = trialComponent.getState();
             state.audioPlaybackOrder.push(audioId);
             state.audioPlaybackCounts[audioId] = (state.audioPlaybackCounts[audioId] || 0) + 1;
           });
-          audio.addEventListener("ended", () => updateButtonStates(false));
-          audio.addEventListener("pause", () => updateButtonStates(false));
-          audio.addEventListener("error", () => updateButtonStates(false));
+
+          audio.addEventListener("pause", () => {
+            updateBtnDisplay();
+          });
+
+          audio.addEventListener("ended", () => {
+            updateBtnDisplay();
+            seek.value = "0";
+            btn.classList.add("listened");
+
+            // Unlock the seekbar permanently after first complete listen
+            seek.disabled = false;
+            seek.style.cursor = "pointer";
+            seek.style.opacity = "1";
+
+            if (isTest && idxStr !== null) {
+              listenedTestOptions.add(parseInt(idxStr, 10));
+              checkCanSubmit();
+            } else if (!isTest && idxStr !== null) {
+              listenedTrainOptions.add(parseInt(idxStr, 10));
+              updateTestAccess();
+            }
+          });
         });
 
         if (submitBtn) {
@@ -409,9 +469,13 @@ export function buildTrial(jsPsych: any, phase: Phase, trial: TrialStimulus, pra
             submitBtn.disabled = true;
             radios.forEach((r) => (r.disabled = true));
             confidenceInputs.forEach((c) => (c.disabled = true));
-            updateButtonStates(true);
 
-            audioElements.forEach((a) => a.pause());
+            audioElements.forEach((a) => {
+              a.pause();
+            });
+
+            const playButtons = document.querySelectorAll<HTMLButtonElement>(".audio-play-btn");
+            playButtons.forEach((b) => (b.disabled = true));
 
             // Visual feedback handling
             const currentState = trialComponent.getState();

@@ -50,8 +50,8 @@ export const consent = {
 
           <p>
           Anyone aged 18 or older with normal or corrected-to-normal hearing may participate in this study. 
-          If you choose to participate, you will listen to short music excerpts and respond to questions (e.g., “which melody is the one you just memorized?”). 
-          The session will take approximately 30-45 minutes. 
+          If you choose to participate, you will listen to short music excerpts and respond to questions (e.g., “which melody follows the same pattern as the training group?”). 
+          The session will take approximately 45-60 minutes. 
           Your participation is entirely voluntary. You are free to accept or refuse to participate in the study. 
           If you choose not to participate, or if you choose to change your mind during the course of the experiment, you may withdraw at any time by closing your browser window. 
           No data will be collected or stored in case of withdrawal. 

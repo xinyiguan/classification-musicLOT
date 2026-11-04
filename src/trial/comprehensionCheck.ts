@@ -7,7 +7,7 @@ const BADGE_HEADER_STYLE = "background-color: #ebf5fa; color: #059669; display: 
 const CC_QUESTIONS = [
     {
         id: "play_count",
-        prompt: "How many times can you replay the melodies?",
+        prompt: "How many times can you replay all the melodies?",
         correctAnswer: "As many times as I need",
         options: [
             "As many times as I need",
@@ -19,12 +19,12 @@ const CC_QUESTIONS = [
     {
         id: "classification_task",
         prompt: "What is your primary objective when evaluating the options in the right column?",
-        correctAnswer: "Pick the option that belongs to the training group",
+        correctAnswer: "Pick the option that follows the same pattern as the training group",
         options: [
-            "Pick the option that sounds the longest",
-            "Pick randomly",
-            "Pick the option that belongs to the training group",
-            "Adjust the volume of the sound"
+            "Pick the option that matches the very last melody you heard",
+            "Pick the option that sounds completely different from the training group",
+            "Pick the option that follows the same pattern as the training group",
+            "Pick the option that sounds the most complex"
         ]
     }
 ];
