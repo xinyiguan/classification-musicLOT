@@ -509,6 +509,7 @@ export function buildTrial(jsPsych: any, phase: Phase, trial: TrialStimulus, pra
         const currentState = trialComponent.getState();
         data.trial_id = trial.trial_id;
         data.train = trial.train;
+        data.test = trial.test;
         data.phase = phase;
         data.response = currentState.userResponse;
         data.confidence = currentState.userConfidence;
